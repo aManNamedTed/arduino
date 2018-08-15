@@ -1,3 +1,4 @@
+<img src="binaryCounter.gif"/>
 ## Why a Binary Counter?
 
 First time using an arduino and I made an LED blink, which was AWESOME. So I decided to do it x8.
