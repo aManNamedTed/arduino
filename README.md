@@ -1,5 +1,4 @@
 # arduino
-#### Arduino sketches by David
 
 ## Hello!
 
