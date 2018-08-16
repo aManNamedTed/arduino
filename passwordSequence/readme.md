@@ -1,7 +1,7 @@
 # Why a password sequence using buttons?
 
 Well because I can, and it's awesome!
-
+<img src="passwordSequence.gif">
 # Credit
 
 How to wire up the lcd screen:   https://www.youtube.com/watch?v=Mr9FQKcrGpA <br/>
