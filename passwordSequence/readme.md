@@ -1,7 +1,7 @@
 # Why a password sequence [using buttons]?
 
 <img src="passwordSequence.gif">
-Well because I can, and it's awesome!
+Well because I can, and it's awesome! <br/>
 
 All I wanted to do tonight was play around with the lcd screen and practice reading
 resistors and yet, it's 2:38AM and I'm writing this so... that's a thing.
