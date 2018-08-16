@@ -25,11 +25,9 @@ void setup() {
 void loop() {
   for(int i = 0; i < numButts; i++) {    
     if(!btnStateArr[i]) {
-      if(digitalRead(btnPinArr[i]) == LOW)
-      {
+      if(digitalRead(btnPinArr[i]) == LOW) {
         // keep screen *seemingly* static while there has been no input
-        if(attempt.length() == 0)
-        {
+        if(attempt.length() == 0) {
           lcd.clear();
           lcd.print("PW: ");
         }
@@ -40,7 +38,7 @@ void loop() {
       }
     }
     else {
-      if(digitalRead(btnPinArr[i]) == HIGH){
+      if(digitalRead(btnPinArr[i]) == HIGH) {
         attempt += String(i + 1);
         lcd.clear();
         lcd.print("PW: " + attempt);     
