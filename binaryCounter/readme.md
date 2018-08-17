@@ -1,6 +1,6 @@
 ## Why a Binary Counter?
 
-<img text-align="center" src="binaryCounter.gif"/>
+<img src="binaryCounter.gif"/>
 
 First time doing arduino stuff, so I wanted to expand on the standard LED-blink "Hello World!"
 project.
