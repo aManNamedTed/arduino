@@ -5,7 +5,7 @@ int startPin = 9;
 int numLeds = 5;
 long duration;
 int distance;
-int triggerDistance = 250; // 250 centimeters = ~10 inches
+int triggerDistance = 250; // 250 centimeters == ~10 inches
 
 void setup() {
   for(int i = 0; i < numLeds; i++) { 
