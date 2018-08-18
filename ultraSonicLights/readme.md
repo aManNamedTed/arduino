@@ -11,4 +11,4 @@ Other than that, still awesome!
 
 # Credit
 
-How to wire up an ultrasonic senosr: https://www.youtube.com/watch?v=ZejQOX69K5M
+How to wire up an ultrasonic sensor: https://www.youtube.com/watch?v=ZejQOX69K5M
