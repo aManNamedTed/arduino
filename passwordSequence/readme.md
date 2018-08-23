@@ -1,6 +1,8 @@
 # Why a password sequence [using buttons]?
 
 <img src="passwordSequence.gif">
+<img src="passwordSequenceBright.gif">
+
 Well because I can, and it's awesome! <br/><br/>
 
 All I wanted to do tonight was play around with the lcd screen and practice reading
