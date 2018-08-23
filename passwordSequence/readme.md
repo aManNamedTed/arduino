@@ -1,7 +1,6 @@
 # Why a password sequence [using buttons]?
 
 <img src="passwordSequence.gif">
-<img src="passwordSequenceBright.gif">
 
 Well because I can, and it's awesome! <br/><br/>
 
@@ -12,6 +11,8 @@ After I got the screen running, I started playing around with buttons and this
 happened. Maybe when I get some MOSFETs and prettier buttons I'll spend less time
 having fun with 12V stuffs.
 
+<img src="passwordSequenceBright.gif">
+In both gifs, password is 12345.
 ## PSYCH!
 
 Yeah so I bought like $40 more worth of components and I can tell this is going to
