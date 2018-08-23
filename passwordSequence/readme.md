@@ -8,7 +8,7 @@ All I wanted to do tonight was play around with the lcd screen and practice read
 resistors and yet, it's 2:38AM and I'm writing this so... that's a thing.
 
 <img src="passwordSequenceBright.gif">
-In both gifs, password is 12345.
+In both gifs, password is 12345. <br/><br/>
 
 After I got the screen running, I started playing around with buttons and this
 happened. Maybe when I get some MOSFETs and prettier buttons I'll spend less time
