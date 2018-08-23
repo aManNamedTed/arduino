@@ -13,6 +13,7 @@ having fun with 12V stuffs.
 
 <img src="passwordSequenceBright.gif">
 In both gifs, password is 12345.
+
 ## PSYCH!
 
 Yeah so I bought like $40 more worth of components and I can tell this is going to
