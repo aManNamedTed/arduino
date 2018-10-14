@@ -8,7 +8,7 @@ const int RIGHT_SIDE_ORIGIN = 180;
 const int RIGHT_NUB = 135;
 
 const int CLEAR_DELAY = 333;
-const int CHAR_DELAY = 2000;
+const int CHAR_DELAY = 666;
 
 // The BrailleLetter class, which contains 6 servos that push each nubbin along
 // with the fundamental characters needed to create language with Braille
@@ -678,7 +678,6 @@ void setup() {
 }
 
 void loop() {
-  //letter.writeHelloWorld();
-  //letter.clearNubs();
-  //letter.writeCustom("ABC");
+  letter.writeHelloWorld();
+  letter.clearNubs();
 }
