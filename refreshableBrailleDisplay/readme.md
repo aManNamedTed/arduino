@@ -1,9 +1,9 @@
 ## Why a Refreshable Braille Display?
 
-<img src="refreshableBrailleDisplay.gif"/>
-<img src="refreshableBrailleDisplayFront.jpg"/>
-<img src="refreshableBrailleDisplayTop.jpg"/>
-<img src="refreshableBrailleDisplayBack.jpg"/>
+<img src="refreshableBrailleDisplay.gif" />
+<img src="refreshableBrailleDisplayFront.jpg" style="transform:rotate(90deg);/>
+<img src="refreshableBrailleDisplayTop.jpg" style="transform:rotate(90deg);/>
+<img src="refreshableBrailleDisplayBack.jpg" style="transform:rotate(90deg);/>
 
 Hi peeps! This is my submission for SD Hacks 2018, held between October 12 (2018) - October 14 (2018).
 
