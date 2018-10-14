@@ -8,52 +8,40 @@ const int RIGHT_SIDE_ORIGIN = 180;
 const int RIGHT_NUB = 135;
 
 const int CLEAR_DELAY = 333;
-const int CHAR_DELAY = 1000;
+const int CHAR_DELAY = 2000;
 
+// The BrailleLetter class, which contains 6 servos that push each nubbin along
+// with the fundamental characters needed to create language with Braille
 class BrailleLetter {
   public:
-  // formatting as such to maintain braille numbering
-  Servo nub1; Servo nub4;
-  Servo nub2; Servo nub5;
-  Servo nub3; Servo nub6;
+  Servo nub1; Servo nub4; // Nub 1 | Nub 4
+  Servo nub2; Servo nub5; // Nub 2 | Nub 5
+  Servo nub3; Servo nub6; // Nub 3 | Nub 6
 
-  void BrailleLetter::writeA();
-  void BrailleLetter::writeB();
-  void BrailleLetter::writeC();
-  void BrailleLetter::writeD();
-  void BrailleLetter::writeE();
-  void BrailleLetter::writeF();
-  void BrailleLetter::writeG();
-  void BrailleLetter::writeH();
-  void BrailleLetter::writeI();
-  void BrailleLetter::writeJ();
-  void BrailleLetter::writeK();
-  void BrailleLetter::writeL();
-  void BrailleLetter::writeM();
-  void BrailleLetter::writeN();
-  void BrailleLetter::writeO();
-  void BrailleLetter::writeP();
-  void BrailleLetter::writeQ();
-  void BrailleLetter::writeR();
-  void BrailleLetter::writeS();
-  void BrailleLetter::writeT();
-  void BrailleLetter::writeU();
-  void BrailleLetter::writeV();
-  void BrailleLetter::writeW();
-  void BrailleLetter::writeX();
-  void BrailleLetter::writeY();
-  void BrailleLetter::writeZ();
+  // letters (English Alphabet)
+  void BrailleLetter::writeA(); void BrailleLetter::writeB();
+  void BrailleLetter::writeC(); void BrailleLetter::writeD();
+  void BrailleLetter::writeE(); void BrailleLetter::writeF();
+  void BrailleLetter::writeG(); void BrailleLetter::writeH();
+  void BrailleLetter::writeI(); void BrailleLetter::writeJ();
+  void BrailleLetter::writeK(); void BrailleLetter::writeL();
+  void BrailleLetter::writeM(); void BrailleLetter::writeN();
+  void BrailleLetter::writeO(); void BrailleLetter::writeP();
+  void BrailleLetter::writeQ(); void BrailleLetter::writeR();
+  void BrailleLetter::writeS(); void BrailleLetter::writeT();
+  void BrailleLetter::writeU(); void BrailleLetter::writeV();
+  void BrailleLetter::writeW(); void BrailleLetter::writeX();
+  void BrailleLetter::writeY(); void BrailleLetter::writeZ();
+
+  // numbers (0-9 and the # symbol)
   void BrailleLetter::writeHash();
-  void BrailleLetter::write1();
-  void BrailleLetter::write2();
-  void BrailleLetter::write3();
-  void BrailleLetter::write4();
-  void BrailleLetter::write5();
-  void BrailleLetter::write6();
-  void BrailleLetter::write7();
-  void BrailleLetter::write8();
-  void BrailleLetter::write9();
-  void BrailleLetter::write0();
+  void BrailleLetter::write1(); void BrailleLetter::write2();
+  void BrailleLetter::write3(); void BrailleLetter::write4();
+  void BrailleLetter::write5(); void BrailleLetter::write6();
+  void BrailleLetter::write7(); void BrailleLetter::write8();
+  void BrailleLetter::write9(); void BrailleLetter::write0();
+
+  // punctuation [, ; : . ? ! ' " " ' ' ( ) / \ -]
   void BrailleLetter::writeComma();
   void BrailleLetter::writeSemicolon();
   void BrailleLetter::writeColon();
@@ -70,17 +58,15 @@ class BrailleLetter {
   void BrailleLetter::writeForwardSlash();
   void BrailleLetter::writeBackSlash();
   void BrailleLetter::writeHyphen();
-  
+
+  // demo functions ("Hello World!", A-Z, 0-9, Custom String)
+  void BrailleLetter::writeHelloWorld();
   void BrailleLetter::writeAlphabet();
   void BrailleLetter::writeNumeric();
-  
-  /*
-   * write alphabet
-   * write numbers
-   * write punctuation
-   * write custom string
-   *  the above will require a lookup of the character, and iterate through the chars in str
-   */
+  void BrailleLetter::writeCustom(String str);
+  void BrailleLetter::writeChar(char ch);
+
+  // helper functions (Clear nubbins for next letter)
   void BrailleLetter::clearNubs();
 };
 
@@ -422,6 +408,20 @@ void BrailleLetter::writeHyphen() {
   nub6.write(RIGHT_NUB);
 }
 
+void BrailleLetter::writeHelloWorld() {
+  this->writeH(); this->clearNubs();
+  this->writeE(); this->clearNubs();
+  this->writeL(); this->clearNubs();
+  this->writeL(); this->clearNubs();
+  this->writeO(); this->clearNubs();
+  this->writeW(); this->clearNubs();
+  this->writeO(); this->clearNubs();
+  this->writeR(); this->clearNubs();
+  this->writeL(); this->clearNubs();
+  this->writeD(); this->clearNubs();
+  this->writeExclamationMark(); this->clearNubs();
+}
+
 void BrailleLetter::writeAlphabet() {
   this->writeA(); this->clearNubs();
   this->writeB(); this->clearNubs();
@@ -464,6 +464,14 @@ void BrailleLetter::writeNumeric() {
   this->write0(); this->clearNubs();
 }
 
+void BrailleLetter::writeCustom(String str) {
+  for(char &ch : str)
+  {
+    this->writeChar(ch);
+    this->clearNubs();
+  }
+}
+
 void BrailleLetter::clearNubs() {
   delay(CHAR_DELAY);
   nub1.write(LEFT_SIDE_ORIGIN);
@@ -473,6 +481,19 @@ void BrailleLetter::clearNubs() {
   nub5.write(RIGHT_SIDE_ORIGIN);
   nub6.write(RIGHT_SIDE_ORIGIN);
   delay(CLEAR_DELAY);
+}
+
+void BrailleLetter::writeChar(char ch)
+{
+  if(ch == 'a' || ch == 'A') {
+    this->writeA();  
+  }
+  else if(ch == 'b' || ch == 'B') {
+    this->writeB();
+  }
+  else if(ch == 'c' || ch == 'C') {
+    this->writeC();
+  }
 }
 
 BrailleLetter letter;
@@ -510,13 +531,7 @@ void setup() {
 }
 
 void loop() {
-  /*
-  letter.writeA();
+  letter.writeHelloWorld();
   letter.clearNubs();
-  letter.writeB();
-  letter.clearNubs();
-  letter.writeC();
-  letter.clearNubs();
-
-  /**/
+  //letter.writeCustom("ABC");
 }
