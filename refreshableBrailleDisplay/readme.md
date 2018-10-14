@@ -5,7 +5,7 @@ Keep in mind that this is simply a proof of concept, and not a complete, workabl
 ## Why a Refreshable Braille Display?
 
 <img src="refreshableBrailleDisplay.gif" />
-(the above says "Hello world!" in braille!!)
+<h8>(the above says "Hello world!" in braille!!)</h8><br/><br/>
 To show that this thing is possible to make! Modern devices make a premium on this technology, which is insane! The point of making this is to show a proof-of-concept that this kind of device does not have to cost $1000. I just want this to be a useful library to as many people as possible.
 
 # Credit
