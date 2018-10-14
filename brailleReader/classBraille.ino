@@ -494,6 +494,153 @@ void BrailleLetter::writeChar(char ch)
   else if(ch == 'c' || ch == 'C') {
     this->writeC();
   }
+  else if(ch == 'd' || ch == 'D') {
+    this->writeD();
+  }
+  else if(ch == 'e' || ch == 'E') {
+    this->writeE();
+  }
+  else if(ch == 'f' || ch == 'F') {
+    this->writeF();
+  }
+  else if(ch == 'g' || ch == 'G') {
+    this->writeG();
+  }
+  else if(ch == 'h' || ch == 'H') {
+    this->writeH();
+  }
+  else if(ch == 'i' || ch == 'I') {
+    this->writeI();
+  }
+  else if(ch == 'j' || ch == 'J') {
+    this->writeJ();
+  }
+  else if(ch == 'k' || ch == 'K') {
+    this->writeK();
+  }
+  else if(ch == 'l' || ch == 'L') {
+    this->writeL();
+  }
+  else if(ch == 'm' || ch == 'M') {
+    this->writeM();
+  }
+  else if(ch == 'n' || ch == 'N') {
+    this->writeN();
+  }
+  else if(ch == 'o' || ch == 'O') {
+    this->writeO();
+  }
+  else if(ch == 'p' || ch == 'P') {
+    this->writeP();
+  }
+  else if(ch == 'q' || ch == 'Q') {
+    this->writeQ();
+  }
+  else if(ch == 'r' || ch == 'R') {
+    this->writeR();
+  }
+  else if(ch == 's' || ch == 'S') {
+    this->writeS();
+  }
+  else if(ch == 't' || ch == 'T') {
+    this->writeT();
+  }
+  else if(ch == 'u' || ch == 'U') {
+    this->writeU();
+  }
+  else if(ch == 'v' || ch == 'v') {
+    this->writeV();
+  }
+  else if(ch == 'w' || ch == 'W') {
+    this->writeW();
+  }
+  else if(ch == 'x' || ch == 'X') {
+    this->writeX();
+  }
+  else if(ch == 'y' || ch == 'Y') {
+    this->writeY();
+  }
+  else if(ch == 'z' || ch == 'Z') {
+    this->writeZ();
+  }
+  else if(ch == '1') {
+    this->write1();
+  }
+  else if(ch == '2') {
+    this->write2();
+  }
+  else if(ch == '3') {
+    this->write3();
+  }
+  else if(ch == '4') {
+    this->write4();
+  }
+  else if(ch == '5') {
+    this->write5();
+  }
+  else if(ch == '6') {
+    this->write6();
+  }
+  else if(ch == '7') {
+    this->write7();
+  }
+  else if(ch == '8') {
+    this->write8();
+  }
+  else if(ch == '9') {
+    this->write9();
+  }
+  else if(ch == '0') {
+    this->write0();
+  }
+  else if(ch == ',') {
+    this->writeComma();
+  }
+  else if(ch == ';') {
+    this->writeSemicolon();
+  }
+  else if(ch == ':') {
+    this->writeColon();
+  }
+  else if(ch == '.') {
+    this->writePeriod();
+  }
+  else if(ch == '?') {
+    this->writeQuestionMark();
+  }
+  else if(ch == '!') {
+    this->writeExclamationMark();
+  }
+  else if(ch == '\'') {
+    this->writeApostrophe();
+  }
+  else if(ch == '"') {
+    this->writeLeftDoubleQuotes();
+  }
+  else if(ch == '"') {
+    this->writeRightDoubleQuotes();
+  }
+  else if(ch == '\'') {
+    this->writeLeftSingleQuote();
+  }
+  else if(ch == '\'') {
+    this->writeRightSingleQuote();
+  }
+  else if(ch == '(') {
+    this->writeLeftParenthesis();
+  }
+  else if(ch == ')') {
+    this->writeRightParenthesis();
+  }
+  else if(ch == '/') {
+    this->writeForwardSlash();
+  }  
+  else if(ch == '\\') {
+    this->writeBackSlash();
+  }  
+  else if(ch == '-') {
+    this->writeHyphen();
+  }  
 }
 
 BrailleLetter letter;
@@ -531,7 +678,7 @@ void setup() {
 }
 
 void loop() {
-  letter.writeHelloWorld();
-  letter.clearNubs();
+  //letter.writeHelloWorld();
+  //letter.clearNubs();
   //letter.writeCustom("ABC");
 }
