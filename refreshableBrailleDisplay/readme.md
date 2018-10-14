@@ -1,7 +1,7 @@
 ## Why a Refreshable Braille Display?
 
 <img src="refreshableBrailleDisplay.gif" />
-<img src="refreshableBrailleDisplayFront.jpg" style="transform:rotate(180deg);" />
+<img src="refreshableBrailleDisplayFront.jpg" height="700px" width="500px" style="transform:rotate(90deg);" />
 <img src="refreshableBrailleDisplayTop.jpg" style="transform:rotate(90deg);" />
 <img src="refreshableBrailleDisplayBack.jpg" style="transform:rotate(90deg);" />
 
