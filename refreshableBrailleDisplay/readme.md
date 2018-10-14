@@ -6,7 +6,7 @@ Keep in mind that this is simply a proof of concept, and not a complete, workabl
 
 <img src="refreshableBrailleDisplay.gif" />
 
-The point of making this was as a proof-of-concept that this kind of device does not have to cost $1000. I just want this to be a useful library (if it gets that far).
+To show that this thing is possible to make! Modern devices make a premium on this technology, which is insane! The point of making this is to show a proof-of-concept that this kind of device does not have to cost $1000. I just want this to be a useful library to as many people as possible.
 
 # Credit
 
