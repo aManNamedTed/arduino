@@ -1,6 +1,6 @@
-## Why a braille reader?
+## Why a Refreshable Braille Display?
 
-<img src="brailleReader.gif"/>
+<img src="refreshableBrailleDisplay.gif"/>
 
 Hi peeps! This is my submission for SD Hacks 2018, held between October 12 (2018) - October 14 (2018).
 
