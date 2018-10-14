@@ -13,7 +13,8 @@ To show that this thing is possible to make! Modern devices make a premium on th
 How to wire up a servo: https://www.youtube.com/watch?v=SfmHNb5QAzc <br/>
 The braille alphabet, number, and punctuation notation: https://www.pharmabraille.com/pharmaceutical-braille/the-braille-alphabet/
 
-# The SD Hack Submission Description
+# The SD Hacks Submission Description
+
 ## Inspiration
 
 I think refreshable braille displays are overpriced. I was pretty sure I could recreate one using an Arduino Uno and some servos... and so I did.
