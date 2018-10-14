@@ -8,11 +8,6 @@ Keep in mind that this is simply a proof of concept, and not a complete, workabl
 <h8>(the above says "Hello world!" in braille!!)</h8><br/><br/>
 To show that this thing is possible to make! Modern devices make a premium on this technology, which is insane! The point of making this is to show a proof-of-concept that this kind of device does not have to cost $1000. I just want this to be a useful library to as many people as possible.
 
-# Credit
-
-How to wire up a servo: https://www.youtube.com/watch?v=SfmHNb5QAzc <br/>
-The braille alphabet, number, and punctuation notation: https://www.pharmabraille.com/pharmaceutical-braille/the-braille-alphabet/
-
 # The SD Hacks Submission Description
 
 ## Inspiration
@@ -38,5 +33,10 @@ Verify that you have all the components you need to do the thing you want to do!
 Open-source the library and build it out a little bit more. I know there is an advanced version of Braille where they use common letter pairs like 'sh' and 'ch' and 'th'. I could put that into the library and maybe use tries to get an O(1) lookup time for N+1 character/character pairs. That would be something.
 
 I think it would be helpful to try and mass-produce some kind of accessible device that has this library in it. I am not quite aware of the current state of the market or demand of refreshable braille displays, but I think it would be useful to at least one person which is good enough for me.
+
+# Credit
+
+How to wire up a servo: https://www.youtube.com/watch?v=SfmHNb5QAzc <br/>
+The braille alphabet, number, and punctuation notation: https://www.pharmabraille.com/pharmaceutical-braille/the-braille-alphabet/
 
 Anyway, thanks for checking this sketch out! I appreciate it!
