@@ -54,8 +54,6 @@ class BrailleLetter {
   void BrailleLetter::write8();
   void BrailleLetter::write9();
   void BrailleLetter::write0();
-  void BrailleLetter::writeAlphabet();
-  void BrailleLetter::writeNumeric();
   void BrailleLetter::writeComma();
   void BrailleLetter::writeSemicolon();
   void BrailleLetter::writeColon();
@@ -63,6 +61,18 @@ class BrailleLetter {
   void BrailleLetter::writeQuestionMark();
   void BrailleLetter::writeExclamationMark();
   void BrailleLetter::writeApostrophe();
+  void BrailleLetter::writeLeftDoubleQuotes();
+  void BrailleLetter::writeRightDoubleQuotes();
+  void BrailleLetter::writeLeftSingleQuote();
+  void BrailleLetter::writeRightSingleQuote();
+  void BrailleLetter::writeLeftParenthesis();
+  void BrailleLetter::writeRightParenthesis();
+  void BrailleLetter::writeForwardSlash();
+  void BrailleLetter::writeBackSlash();
+  void BrailleLetter::writeHyphen();
+  
+  void BrailleLetter::writeAlphabet();
+  void BrailleLetter::writeNumeric();
   
   /*
    * write alphabet
@@ -245,62 +255,213 @@ void BrailleLetter::writeHash() {
 
 void BrailleLetter::write1() {
   this->writeHash();
-  delay(CHAR_DELAY);
+  this->clearNubs();
   this->writeA(); // 'a' and '1' share the same figure, just 1 has the #(hash) prefix
 }
 
 void BrailleLetter::write2() {
   this->writeHash();
-  delay(CHAR_DELAY);
+  this->clearNubs();
   this->writeB(); // #, b
 }
 
 void BrailleLetter::write3() {
   this->writeHash();
-  delay(CHAR_DELAY);
+  this->clearNubs();
   this->writeC(); // #, c
 }
 
 void BrailleLetter::write4() {
   this->writeHash();
-  delay(CHAR_DELAY);
+  this->clearNubs();
   this->writeD(); // #, d
 }
 
 void BrailleLetter::write5() {
   this->writeHash();
-  delay(CHAR_DELAY);
+  this->clearNubs();
   this->writeE(); // #, e
 }
 
 void BrailleLetter::write6() {
   this->writeHash();
-  delay(CHAR_DELAY);
+  this->clearNubs();
   this->writeF(); // #, f
 }
 
 void BrailleLetter::write7() {
   this->writeHash();
-  delay(CHAR_DELAY);
+  this->clearNubs();
   this->writeG(); // #, g
 }
 
 void BrailleLetter::write8() {
   this->writeHash();
-  delay(CHAR_DELAY);
+  this->clearNubs();
   this->writeH(); // #, h
 }
 
 void BrailleLetter::write9() {
   this->writeHash();
-  delay(CHAR_DELAY);
+  this->clearNubs();
   this->writeI(); // #, i
 }
 
 void BrailleLetter::write0() {
   this->writeHash();
-  delay(CHAR_DELAY);
+  this->clearNubs();
   this->writeJ(); // #, j
+}
+
+void BrailleLetter::writeComma() {
+  nub2.write(LEFT_NUB);
+}
+
+void BrailleLetter::writeSemicolon() {
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+}
+
+void BrailleLetter::writeColon() {
+  nub2.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writePeriod() {
+  nub2.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeQuestionMark() {
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeExclamationMark() {
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeApostrophe() {
+  nub3.write(LEFT_NUB);
+}
+
+void BrailleLetter::writeLeftDoubleQuotes() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeRightDoubleQuotes() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  nub3.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeLeftSingleQuote() {
+  nub3.write(LEFT_NUB);
+  this->clearNubs();
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeRightSingleQuote() { 
+  nub3.write(LEFT_NUB);
+  this->clearNubs();
+  nub3.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeLeftParenthesis() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeRightParenthesis() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeForwardSlash() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeBackSlash() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeHyphen() {
+  nub3.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeAlphabet() {
+  this->writeA(); this->clearNubs();
+  this->writeB(); this->clearNubs();
+  this->writeC(); this->clearNubs();
+  this->writeD(); this->clearNubs();
+  this->writeE(); this->clearNubs();
+  this->writeF(); this->clearNubs();
+  this->writeG(); this->clearNubs();
+  this->writeH(); this->clearNubs();
+  this->writeI(); this->clearNubs();
+  this->writeJ(); this->clearNubs();
+  this->writeK(); this->clearNubs();
+  this->writeL(); this->clearNubs();
+  this->writeM(); this->clearNubs();
+  this->writeN(); this->clearNubs();
+  this->writeO(); this->clearNubs();
+  this->writeP(); this->clearNubs();
+  this->writeQ(); this->clearNubs();
+  this->writeR(); this->clearNubs();
+  this->writeS(); this->clearNubs();
+  this->writeT(); this->clearNubs();
+  this->writeU(); this->clearNubs();
+  this->writeV(); this->clearNubs();
+  this->writeW(); this->clearNubs();
+  this->writeX(); this->clearNubs();
+  this->writeY(); this->clearNubs();
+  this->writeZ(); this->clearNubs();
+}
+
+void BrailleLetter::writeNumeric() {
+  this->write1(); this->clearNubs();
+  this->write2(); this->clearNubs();
+  this->write3(); this->clearNubs();
+  this->write4(); this->clearNubs();
+  this->write5(); this->clearNubs();
+  this->write6(); this->clearNubs();
+  this->write7(); this->clearNubs();
+  this->write8(); this->clearNubs();
+  this->write9(); this->clearNubs();
+  this->write0(); this->clearNubs();
 }
 
 void BrailleLetter::clearNubs() {
