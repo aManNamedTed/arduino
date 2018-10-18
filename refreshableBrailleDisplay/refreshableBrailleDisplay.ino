@@ -81,7 +81,23 @@ class BrailleLetter {
   void BrailleLetter::writeAs();
 
   // Contractions beginning with 'B'
+  // need to add B contractions to this section
+  void BrailleLetter::writeModifiedB();
   void BrailleLetter::writeBs();
+  void BrailleLetter::writeModifiedB();
+  void BrailleLetter::write_BB_();
+  void BrailleLetter::writeBe_();
+  void BrailleLetter::writeBecause();
+  void BrailleLetter::writeBefore();
+  void BrailleLetter::writeBehind();
+  void BrailleLetter::writeBelow() ;
+  void BrailleLetter::writeBeneath();
+  void BrailleLetter::writeBeside();
+  void BrailleLetter::writeBetween();
+  void BrailleLetter::writeBeyond();
+  void BrailleLetter::writeBlind();
+  void BrailleLetter::writeBraille();
+  void BrailleLetter::writeBut();
 
   // Contractions beginning with 'C'
   // Contractions beginning with 'D'
@@ -613,7 +629,48 @@ void BrailleLetter::writeAs() {
 }
 
 // Start contractions starting with B
-void BrailleLetter::writeB() {}
+void BrailleLetter::writeModifiedB() {
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+}
+
+void BrailleLetter::write_BB_() {
+}
+
+void BrailleLetter::writeBe_() {
+  //figure out how to do underlined and next-to-letter functions
+  //include below in a .h file? is that possible with .ino files?
+  //#define BrailleLetter::writeBe(), BrailleLetter::WriteBe();
+  this->write_BB_();
+}
+
+void BrailleLetter::writeBecause() {
+  // need to create 
+
+}
+
+void BrailleLetter::writeBefore() {
+
+}
+
+void BrailleLetter::writeBehind() {
+
+}
+
+void BrailleLetter::writeBelow() {
+
+}
+
+void BrailleLetter::writeBeneath() {
+
+}
+
+void BrailleLetter::writeBeside() {}
+void BrailleLetter::writeBetween() {}
+void BrailleLetter::writeBeyond() {}
+void BrailleLetter::writeBlind() {}
+void BrailleLetter::writeBraille() {}
+void BrailleLetter::writeBut() {}
 
 void BrailleLetter::writeCustom(String str) {
   for(char &ch : str)
