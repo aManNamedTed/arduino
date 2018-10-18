@@ -38,5 +38,7 @@ I think it would be helpful to try and mass-produce some kind of accessible devi
 
 How to wire up a servo: https://www.youtube.com/watch?v=SfmHNb5QAzc <br/>
 The braille alphabet, number, and punctuation notation: https://www.pharmabraille.com/pharmaceutical-braille/the-braille-alphabet/
-
+The UEB Braille Chart: https://www.duxburysystems.com/braillechart.asp
+>  Follow the instructions on the webpage to get to the chart. I will also upload
+>  the raw file as a PDF too.
 Anyway, thanks for checking this sketch out! I appreciate it!

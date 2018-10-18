@@ -408,6 +408,12 @@ void BrailleLetter::writeHyphen() {
   nub6.write(RIGHT_NUB);
 }
 
+
+// Begin UEB Braille Chart from Duxbury Systems
+void BrailleLetter::writeAbout() {
+
+}
+
 void BrailleLetter::writeHelloWorld() {
   this->writeH(); this->clearNubs();
   this->writeE(); this->clearNubs();
