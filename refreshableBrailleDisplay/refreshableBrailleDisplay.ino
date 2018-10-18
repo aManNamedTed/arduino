@@ -81,9 +81,6 @@ class BrailleLetter {
   void BrailleLetter::writeAs();
 
   // Contractions beginning with 'B'
-  // need to add B contractions to this section
-  void BrailleLetter::writeModifiedB();
-  void BrailleLetter::writeBs();
   void BrailleLetter::writeModifiedB();
   void BrailleLetter::write_BB_();
   void BrailleLetter::writeBe_();
@@ -634,6 +631,7 @@ void BrailleLetter::writeModifiedB() {
   nub3.write(LEFT_NUB);
 }
 
+// START HERE TODO:
 void BrailleLetter::write_BB_() {
 }
 
