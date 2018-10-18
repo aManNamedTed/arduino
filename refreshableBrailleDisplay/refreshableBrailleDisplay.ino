@@ -566,6 +566,12 @@ void BrailleLetter::writeAs() {
   this->writeZ();
 }
 
+// Start contractions starting with B
+void BrailleLetter::writeAs() {
+  this->writeZ();
+}
+
+
 void BrailleLetter::writeCustom(String str) {
   for(char &ch : str)
   {
@@ -781,5 +787,4 @@ void setup() {
 
 void loop() {
   letter.writeCustom("Hello World!");
-  letter.clearNubs();
 }
