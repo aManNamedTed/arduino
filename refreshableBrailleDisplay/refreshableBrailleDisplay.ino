@@ -543,13 +543,28 @@ void BrailleLetter::write_ance() {
   */
   nub4.write(RIGHT_NUB);
   nub6.write(RIGHT_NUB);
-  this->writeE();
   this->clearNubs();
+  this->writeE();
 }
 
-void BrailleLetter::writeAnd() {}
-void BrailleLetter::writeAr() {}
-void BrailleLetter::writeAs() {}
+void BrailleLetter::writeAnd() {
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeAr() {
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+}
+
+// TODO: This cannot touch other letters
+void BrailleLetter::writeAs() {
+  this->writeZ();
+}
 
 void BrailleLetter::writeCustom(String str) {
   for(char &ch : str)
