@@ -59,10 +59,56 @@ class BrailleLetter {
   void BrailleLetter::writeBackSlash();
   void BrailleLetter::writeHyphen();
 
-  // demo functions ("Hello World!", A-Z, 0-9, Custom String)
-  void BrailleLetter::writeHelloWorld();
-  void BrailleLetter::writeAlphabet();
-  void BrailleLetter::writeNumeric();
+  // Contractions beginning with 'A'
+  void BrailleLetter::writeAbout();
+  void BrailleLetter::writeAbove();
+  void BrailleLetter::writeAccording();
+  void BrailleLetter::writeAcross();
+  void BrailleLetter::writeAfter();
+  void BrailleLetter::writeAfternoon();
+  void BrailleLetter::writeAfterward();
+  void BrailleLetter::writeAgain();
+  void BrailleLetter::writeAgainst();
+  void BrailleLetter::writeAlmost();
+  void BrailleLetter::writeAlready();
+  void BrailleLetter::writeAlso();
+  void BrailleLetter::writeAlthough();
+  void BrailleLetter::writeAltogether();
+  void BrailleLetter::writeAlways();
+  void BrailleLetter::write_ance();
+  void BrailleLetter::writeAnd();
+  void BrailleLetter::writeAr();
+  void BrailleLetter::writeAs();
+
+  // Contractions beginning with 'B'
+  void BrailleLetter::writeBs();
+
+  // Contractions beginning with 'C'
+  // Contractions beginning with 'D'
+  // Contractions beginning with 'E'
+  // Contractions beginning with 'F'
+  // Contractions beginning with 'G'
+  // Contractions beginning with 'H'
+  // Contractions beginning with 'I'
+  // Contractions beginning with 'J'
+  // Contractions beginning with 'K'
+  // Contractions beginning with 'L'
+  // Contractions beginning with 'M'
+  // Contractions beginning with 'N'
+  // Contractions beginning with 'O'
+  // Contractions beginning with 'P'
+  // Contractions beginning with 'Q'
+  // Contractions beginning with 'R'
+  // Contractions beginning with 'S'
+  // Contractions beginning with 'T'
+  // Contractions beginning with 'U'
+  // Contractions beginning with 'V'
+  // Contractions beginning with 'W'
+  // Contractions beginning with 'X'
+  // Contractions beginning with 'Y'
+  // Contractions beginning with 'Z'
+
+  // Main driver function for converting string to Braille output
   void BrailleLetter::writeCustom(String str);
   void BrailleLetter::writeChar(char ch);
 
@@ -412,7 +458,7 @@ void BrailleLetter::writeHyphen() {
 // Begin UEB Braille Chart from Duxbury Systems
 /*
   Contractions to add
-    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+    B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
    New conventions for naming methods:
      use a _ in place of the triangles in the chart
@@ -567,10 +613,7 @@ void BrailleLetter::writeAs() {
 }
 
 // Start contractions starting with B
-void BrailleLetter::writeAs() {
-  this->writeZ();
-}
-
+void BrailleLetter::writeB() {}
 
 void BrailleLetter::writeCustom(String str) {
   for(char &ch : str)
