@@ -678,6 +678,6 @@ void setup() {
 }
 
 void loop() {
-  letter.writeHelloWorld();
+  letter.writeCustom("Hello World!");
   letter.clearNubs();
 }
