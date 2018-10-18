@@ -498,73 +498,58 @@ void BrailleLetter::writeAlready() {
   this->writeL();
   this->clearNubs();
   this->writeR();
-  this->clearNubs();
-  
 }
-void BrailleLetter::writeAlso() {}
-void BrailleLetter::writeAlthough() {}
-void BrailleLetter::writeAltogether() {}
-void BrailleLetter::writeAlways() {}
-void BrailleLetter::write_ance() {}
+
+void BrailleLetter::writeAlso() {
+  this->writeA();
+  this->clearNubs();
+  this->writeL();
+}
+
+void BrailleLetter::writeAlthough() {
+  this->writeA();
+  this->clearNubs();
+  this->writeL();
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeAltogether() {
+  this->writeA();
+  this->clearNubs();
+  this->writeL();
+  this->clearNubs();
+  this->writeT();
+}
+
+void BrailleLetter::writeAlways() {
+  this->writeA();
+  this->clearNubs();
+  this->writeL();
+  this->clearNubs();
+  this->writeW();
+}
+
+// TODO: need to find out how to handle this event with wildcard
+void BrailleLetter::write_ance() {
+  /*
+    if(char 1 - char 4 == 'ance')
+    {
+      use this
+    }
+  */
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->writeE();
+  this->clearNubs();
+}
+
 void BrailleLetter::writeAnd() {}
 void BrailleLetter::writeAr() {}
 void BrailleLetter::writeAs() {}
-
-void BrailleLetter::writeHelloWorld() {
-  this->writeH(); this->clearNubs();
-  this->writeE(); this->clearNubs();
-  this->writeL(); this->clearNubs();
-  this->writeL(); this->clearNubs();
-  this->writeO(); this->clearNubs();
-  this->writeW(); this->clearNubs();
-  this->writeO(); this->clearNubs();
-  this->writeR(); this->clearNubs();
-  this->writeL(); this->clearNubs();
-  this->writeD(); this->clearNubs();
-  this->writeExclamationMark(); this->clearNubs();
-}
-
-void BrailleLetter::writeAlphabet() {
-  this->writeA(); this->clearNubs();
-  this->writeB(); this->clearNubs();
-  this->writeC(); this->clearNubs();
-  this->writeD(); this->clearNubs();
-  this->writeE(); this->clearNubs();
-  this->writeF(); this->clearNubs();
-  this->writeG(); this->clearNubs();
-  this->writeH(); this->clearNubs();
-  this->writeI(); this->clearNubs();
-  this->writeJ(); this->clearNubs();
-  this->writeK(); this->clearNubs();
-  this->writeL(); this->clearNubs();
-  this->writeM(); this->clearNubs();
-  this->writeN(); this->clearNubs();
-  this->writeO(); this->clearNubs();
-  this->writeP(); this->clearNubs();
-  this->writeQ(); this->clearNubs();
-  this->writeR(); this->clearNubs();
-  this->writeS(); this->clearNubs();
-  this->writeT(); this->clearNubs();
-  this->writeU(); this->clearNubs();
-  this->writeV(); this->clearNubs();
-  this->writeW(); this->clearNubs();
-  this->writeX(); this->clearNubs();
-  this->writeY(); this->clearNubs();
-  this->writeZ(); this->clearNubs();
-}
-
-void BrailleLetter::writeNumeric() {
-  this->write1(); this->clearNubs();
-  this->write2(); this->clearNubs();
-  this->write3(); this->clearNubs();
-  this->write4(); this->clearNubs();
-  this->write5(); this->clearNubs();
-  this->write6(); this->clearNubs();
-  this->write7(); this->clearNubs();
-  this->write8(); this->clearNubs();
-  this->write9(); this->clearNubs();
-  this->write0(); this->clearNubs();
-}
 
 void BrailleLetter::writeCustom(String str) {
   for(char &ch : str)
