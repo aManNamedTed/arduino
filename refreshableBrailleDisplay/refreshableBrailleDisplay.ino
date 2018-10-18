@@ -410,9 +410,105 @@ void BrailleLetter::writeHyphen() {
 
 
 // Begin UEB Braille Chart from Duxbury Systems
-void BrailleLetter::writeAbout() {
+/*
+  Contractions to add
+    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
+   New conventions for naming methods:
+     use a _ in place of the triangles in the chart
+     so __ or _
+*/
+// Begin contractions starting with A
+void BrailleLetter::writeAbout() {
+  this->writeA();
+  this->clearNubs();
+  this->writeB();
 }
+
+void BrailleLetter::writeAbove() {
+  this->writeA();
+  this->clearNubs();
+  this->writeB();
+  this->clearNubs();
+  this->writeV();
+}
+
+void BrailleLetter::writeAccording() {
+  this->writeA();
+  this->clearNubs();
+  this->writeC();
+}
+
+void BrailleLetter::writeAcross() {
+  this->writeA();
+  this->clearNubs();
+  this->writeC();
+  this->clearNubs();
+  this->writeR();
+}
+
+void BrailleLetter::writeAfter() {
+  this->writeA();
+  this->clearNubs();
+  this->writeF();
+}
+
+void BrailleLetter::writeAfternoon() {
+  this->writeA();
+  this->clearNubs();
+  this->writeF();
+  this->clearNubs();
+  this->writeN();
+}
+
+void BrailleLetter::writeAfterward() {
+  this->writeA();
+  this->clearNubs();
+  this->writeF();
+  this->clearNubs();
+  this->writeW();
+}
+
+void BrailleLetter::writeAgain() {
+  this->writeA();
+  this->clearNubs();
+  this->writeG();
+}
+
+void BrailleLetter::writeAgainst() {
+  this->writeA();
+  this->clearNubs();
+  this->writeG();
+  this->clearNubs();
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeAlmost() {
+  this->writeA();
+  this->clearNubs();
+  this->writeL();
+  this->clearNubs();
+  this->writeM();
+}
+
+void BrailleLetter::writeAlready() {
+  this->writeA();
+  this->clearNubs();
+  this->writeL();
+  this->clearNubs();
+  this->writeR();
+  this->clearNubs();
+  
+}
+void BrailleLetter::writeAlso() {}
+void BrailleLetter::writeAlthough() {}
+void BrailleLetter::writeAltogether() {}
+void BrailleLetter::writeAlways() {}
+void BrailleLetter::write_ance() {}
+void BrailleLetter::writeAnd() {}
+void BrailleLetter::writeAr() {}
+void BrailleLetter::writeAs() {}
 
 void BrailleLetter::writeHelloWorld() {
   this->writeH(); this->clearNubs();
