@@ -1,135 +1,69 @@
-/*
-  Grove - Music Note Library
-    > Uses tone() function to simulate music note generation.
+// Buzzer music note library using Arduino's Tone() function
 
-  Dec 2012: Created for Educational BoosterPack
-    buzzer Pin = 19
-
-  Dec 2013: Modified for Educational BoosterPack MK II
-    buzzer Pin = 40
-
-  Jun 2016: Modified for Grove Buzzer
-    buzzer Pin = 40
-
-  Oct 2018: Restructuring by David Amante; inspired by Dung Dang
-*/
-
-// 0th octave note frequency
-// Note: frequencies below 31Hz are impossible to generate for this particular buzzer[2]
-const unsigned int BN0;
-BN0 = 31;
-
-// 1st octave note frequencies
+// Octave-specific note declarations to be defined later (for readability)
+const unsigned int BN0; // Note: B-natural 0 is the lowest perceptible note 
 const unsigned int CN1, CS1, DN1, DS1, EN1, FN1, FS1, GN1, GS1, AN1, AS1, BN1;
-CN1 = 33; CS1 = 35; DN1 = 37; DS1 = 39; EN1 = 41; FN1 = 44; 
-FS1 = 46; GN1 = 49; GS1 = 52; AN1 = 55; AS1 = 58; BN1 = 62;
-
-// 2nd octave note frequencies
-const unsigned int CN2, CS2, DN1, DS1, EN1, FN1, FS1, GN1, GS1, AN1, AS1, BN1;
-CN2 = 65; CS2 = 69; DN2 = 73;  DS2 = 78;  EN2 = 82;  FN2 = 87;
-FS2 = 93; GN2 = 98; GS2 = 104; AN2 = 110; AS2 = 117; BN2 = 123;
-const unsigned int CN3, CS3, DN1, DS1, EN1, FN1, FS1, GN1, GS1, AN1, AS1, BN1;
-#define C3  131
-#define CS3 139
-#define D3  147
-#define DS3 156
-#define E3  165
-#define F3  175
-#define FS3 185
-#define G3  196
-#define GS3 208
-#define A3  220
-#define AS3 233
-#define B3  247
-const unsigned int CN4, CS4, DN1, DS1, EN1, FN1, FS1, GN1, GS1, AN1, AS1, BN1;
-#define C4_1 260
-#define C4  262
-#define CS4 277
-#define D4  294
-#define DS4 311
-#define E4  330
-#define F4  349
-#define FS4 370
-#define G4  392
-#define GS4 415
-#define A4  440
-#define AS4 466
-#define B4  494
-const unsigned int CN5, CS5, DN1, DS1, EN1, FN1, FS1, GN1, GS1, AN1, AS1, BN1;
-#define C5  523
-#define CS5 554
-#define D5  587
-#define DS5 622
-#define E5  659
-#define F5  698
-#define FS5 740
-#define G5  784
-#define GS5 831
-#define A5  880
-#define AS5 932
-#define B5  988
-const unsigned int CN6, CS6, DN1, DS1, EN1, FN1, FS1, GN1, GS1, AN1, AS1, BN1;
-#define C6  1047
-#define CS6 1109
-#define D6  1175
-#define DS6 1245
-#define E6  1319
-#define F6  1397
-#define FS6 1480
-#define G6  1568
-#define GS6 1661
-#define A6  1760
-#define AS6 1865
-#define B6  1976
-const unsigned int CN7, CS7, DN1, DS1, EN1, FN1, FS1, GN1, GS1, AN1, AS1, BN1;
-#define C7  2093
-#define CS7 2217
-#define D7  2349
-#define DS7 2489
-#define E7  2637
-#define F7  2794
-#define FS7 2960
-#define G7  3136
-#define GS7 3322
-#define A7  3520
-#define AS7 3729
-#define B7  3951
-const unsigned int CN8, CS8, DN1, DS1, EN1, FN1, FS1, GN1, GS1, AN1, AS1, BN1;
-#define C8  4186
-#define CS8 4435
-#define D8  4699
-#define DS8 4978
+const unsigned int CN2, CS2, DN2, DS2, EN2, FN2, FS2, GN2, GS2, AN2, AS2, BN2;
+const unsigned int CN3, CS3, DN3, DS3, EN3, FN3, FS3, GN3, GS3, AN3, AS3, BN3;
+const unsigned int CN4, CS4, DN4, DS4, EN4, FN4, FS4, GN4, GS4, AN4, AS4, BN4;
+const unsigned int CN5, CS5, DN5, DS5, EN5, FN5, FS5, GN5, GS5, AN5, AS5, BN5;
+const unsigned int CN6, CS6, DN6, DS6, EN6, FN6, FS6, GN6, GS6, AN6, AS6, BN6;
+const unsigned int CN7, CS7, DN7, DS7, EN7, FN7, FS7, GN7, GS7, AN7, AS7, BN7;
+const unsigned int CN8, CS8, DN8, DS8;
 
 int buzzerPin = 40;
 
-// notes in the melody:
-int melody[] = {
-  NOTE_F3_4,NOTE_F4_4, NOTE_F4_4,
-};
-
-// note durations: 4 = quarter note, 8 = eighth note, etc.:
-int noteDurations[] = {
-  4, 4, 2, 2, 2, 1,
-  4, 4, 2, 2, 2, 1,
-  4, 4, 2, 2, 4, 4, 2, 1,
-  4, 4, 2, 2, 2, 1
-};
-
 void setup()
 {
-  pinMode(buzzerPin,OUTPUT);
+  pinMode(buzzerPin, OUTPUT);
 }
 
 void loop()
 {
- for (int thisNote = 0; thisNote < 26; thisNote++) {
-   // to calculate the note duration, take one second
-   // divided by the note type.
-   //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
-   int noteDuration = 1000/noteDurations[thisNote];
-   tone(buzzerPin, melody[thisNote],noteDuration);
-   int pauseBetweenNotes = noteDuration + 50;      //delay between pulse
-   delay(pauseBetweenNotes);
-   noTone(buzzerPin);                // stop the tone playing
- }
+  for (int thisNote = 0; thisNote < 26; thisNote++) 
+  {
+    // to calculate the note duration, take one second
+    // divided by the note type.
+    //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+    tone(buzzerPin, theNote, noteDuration);
+    int noteDuration = 1000/noteDurations[thisNote];
+    tone(buzzerPin, melody[thisNote],noteDuration);
+    int pauseBetweenNotes = noteDuration + 50;      //delay between pulse
+    delay(pauseBetweenNotes);
+    noTone(buzzerPin);                // stop the tone playing
+  }
 }
+
+// 0th octave note frequenc(ies)
+BN0 = 31;    
+
+// 1st octave note frequencies
+CN1 = 33; CS1 = 35; DN1 = 37; DS1 = 39; EN1 = 41; FN1 = 44; 
+FS1 = 46; GN1 = 49; GS1 = 52; AN1 = 55; AS1 = 58; BN1 = 62;
+
+// 2nd octave note frequencies
+CN2 = 65; CS2 = 69; DN2 = 73;  DS2 = 78;  EN2 = 82;  FN2 = 87;
+FS2 = 93; GN2 = 98; GS2 = 104; AN2 = 110; AS2 = 117; BN2 = 123;
+
+// 3rd octave note frequencies
+CN3 = 131; CS3 = 139; DN3 = 147; DS3 = 156; EN3 = 165; FN3 = 175;
+FS3 = 185; GN3 = 196; GS3 = 208; AN3 = 220; AS3 = 233; BN3 = 247;
+
+// 4th octave note frequencies
+CN4 = 262; CS4 = 277; DN4 = 294; DS4 = 311; EN4 = 330; FN4 = 349;
+FS4 = 370; GN4 = 392; GS4 = 415; AN4 = 440; AS4 = 466; BN4 = 494;
+
+// 5th octave note frequencies
+CN5 = 523; CS5 = 554; DN5 = 587; DS5 = 622; EN5 = 659; FN5 = 698;
+FS5 = 740; GN5 = 784; GS5 = 831; AN5 = 880; AS5 = 932; BN5 = 988;
+
+// 6th octave note frequencies
+CN6 = 1047; CS6 = 1109; DN6 = 1175; DS6 = 1245; EN6 = 1319; FN6 = 1397;
+FS6 = 1480; GN6 = 1568; GS6 = 1661; AN6 = 1760; AS6 = 1865; BN6 = 1976;
+
+// 7th octave note frequencies
+CN7 = 2093; CS7 = 2217; DN7 = 2349; DS7 = 2489; EN7 = 2637; FN7 = 2794;
+FS7 = 2960; GN7 = 3136; GS7 = 3322; AN7 = 3520; AS7 = 3729; BN7 = 3951;
+
+// 8th octave note frequencies
+CN8 = 4186; CS8 = 4435; DN8 = 4699; DS8 = 4978;
