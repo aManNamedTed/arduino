@@ -1,4 +1,3 @@
-
 # Why a Buzzer Music Note Library [for the Texas Instruments MSP432P401R]?
 
 This work was inspired by the Texas Instruments Prototyping with 
@@ -41,8 +40,6 @@ Just to clarify, naming conventions are as follows: <br/>
 Why are these note frequencies whole numbers?
     This is because of the Tone() definition by Arduino. The frequency variables
     are defined by unsigned int, which are by definition whole numbers.
-
-
 
 # Credit
 [1] Why use const instead of #define: https://stackoverflow.com/questions/6442328/what-is-the-difference-between-define-and-const <br/>
