@@ -1,11 +1,13 @@
 # Why a Buzzer Music Note Library [for the Texas Instruments MSP432P401R]?
 
+[MSP-EXP432P401R](http://www.ti.com/tool/msp-exp432p401r "The Board Texas Instruments Demo'd for UCSD")
+
 This work was inspired by the Texas Instruments Prototyping with 
 Microcontrollers event that occurred on 24 October, 2018.
 > Disclaimer: I did not have a LaunchPad to prototype this library on, so the
 > actual output of the generated notes may not be consistent with expectations.
 
-I asked one of the Texas Instruments representatives[needs verification on title]
+I asked one of the Texas Instruments representatives (needs verification on title)
 if I could expand on the pre-existing work by Dung Dang and if maybe it could
 be included in their future demos. This is the result.
 
@@ -41,7 +43,7 @@ Just to clarify, naming conventions are as follows: <br/>
 
 Why are these note frequencies whole numbers?
     This is because of the Tone() definition by Arduino. The frequency variables
-    are defined by unsigned int, which are by definition whole numbers.
+    are defined by an unsigned int, which are by definition whole numbers.
 
 # What next?
 
@@ -55,4 +57,4 @@ Maybe after midterm season I can implement that structure.
 [1] Why use const instead of #define: https://stackoverflow.com/questions/6442328/what-is-the-difference-between-define-and-const <br/>
 [2] Definition of Arduino's Tone() function: https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/ <br/>
 [3] The note-to-frequency value reference: https://pages.mtu.edu/~suits/notefreqs.html <br/>
-Thanks for checking out this sketch/library of mine [original work by Dung Dang]! Much love.
+Thanks for checking out this sketch/library of mine (original work by Dung Dang)! Much love.
