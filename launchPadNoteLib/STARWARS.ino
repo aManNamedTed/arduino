@@ -10,9 +10,17 @@ const unsigned int CN5, CS5, DN5, DS5, EN5, FN5, FS5, GN5, GS5, AN5, AS5, BN5;
 const unsigned int CN6, CS6, DN6, DS6, EN6, FN6, FS6, GN6, GS6, AN6, AS6, BN6;
 const unsigned int CN7, CS7, DN7, DS7, EN7, FN7, FS7, GN7, GS7, AN7, AS7, BN7;
 const unsigned int CN8, CS8, DN8, DS8;
+const unsigned int ONE_SECOND = 1000;
+const unsigned int PAUSE = 50;
+const unsigned int W =  1; // Whole note
+const unsigned int H =  2; // Half note
+const unsigned int Q =  4; // Quarter note
+const unsigned int E =  8; // Eighth note
+const unsigned int S = 16; // Sixteenth note
 
 int buzzerPin = 40;
 
+void play(const unsigned int note, unsigned int noteDuration);
 void setup()
 {
   pinMode(buzzerPin, OUTPUT);
@@ -20,18 +28,34 @@ void setup()
 
 void loop()
 {
-  for (int thisNote = 0; thisNote < 26; thisNote++) 
-  {
-    // to calculate the note duration, take one second
-    // divided by the note type.
-    //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
-    tone(buzzerPin, theNote, noteDuration);
-    int noteDuration = 1000/noteDurations[thisNote];
-    tone(buzzerPin, melody[thisNote],noteDuration);
-    int pauseBetweenNotes = noteDuration + 50;      //delay between pulse
-    delay(pauseBetweenNotes);
-    noTone(buzzerPin);                // stop the tone playing
-  }
+  play(DN3, E); play(DN3, E); play(DN3, E); 
+  play(GN3, W);
+  play(DN4, W); 
+  play(CN4, E); play(BN3, E); play(AN3, E);
+  play(GN4, H); play(DN4, Q);
+  play(CN4, E); play(BN3, E); play(AN3, E);
+  play(GN4, H); play(DN4, Q);
+  play(CN4, E); play(BN3, E); play(CN3, E);
+  play(AN3, H);
+
+  play(DN3, E); play(DN3, E);
+  play(GN3, H); 
+  play(DN4, H);
+  play(CN4, E); play(BN3, E); play(AN3, E);
+  play(GN4, H); play(DN4, Q);
+  play(CN4, E); play(BN3, E); play(AN3, E);
+  play(GN4, H); play(DN4, Q);
+  play(CN4, E); play(BN3, E); play(CN3, E);
+  play(AN3, H);
+}
+
+void play(const unsigned int note, unsigned int noteDuration)
+{
+  //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+  noteDuration = SECOND / noteDuration;
+  tone(buzzerPin, note, noteDuration);
+  delay(PAUSE);
+  noTone(buzzerPin);
 }
 
 // 0th octave note frequenc(ies)

@@ -2,6 +2,8 @@
 
 This work was inspired by the Texas Instruments Prototyping with 
 Microcontrollers event that occurred on 24 October, 2018.
+> Disclaimer: I did not have a LaunchPad to prototype this library on, so the
+> actual output of the generated notes may not be consistent with expectations.
 
 I asked one of the Texas Instruments representatives[needs verification on title]
 if I could expand on the pre-existing work by Dung Dang and if maybe it could
@@ -40,6 +42,14 @@ Just to clarify, naming conventions are as follows: <br/>
 Why are these note frequencies whole numbers?
     This is because of the Tone() definition by Arduino. The frequency variables
     are defined by unsigned int, which are by definition whole numbers.
+
+# What next?
+
+One major improvement that immediately comes to mind would be to modularize this
+code into .h and .cpp files so that you could just include it as a library in 
+your sketch, but that would take documentation and hours I do not currently have.
+
+Maybe after midterm season I can implement that structure.
 
 # Credit
 [1] Why use const instead of #define: https://stackoverflow.com/questions/6442328/what-is-the-difference-between-define-and-const <br/>
