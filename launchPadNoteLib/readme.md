@@ -36,7 +36,7 @@ Oct 2018: Restructuring and optimizing by David Amante; <br>
 # Technical Notes
 
 Just to clarify, naming conventions are as follows: <br/>
-<XN#>: <br/>
+<X, N, #>: <br/>
     <Note letter, Natural/Sharp/Flat, Octave number><br/>
     Example: CS1 == (C-sharp, octave 1)<br/>
     Example: DN6 == (D-natural, octave 6)<br/>
