@@ -1,4 +1,4 @@
-# Why a Buzzer Music Note Library [for the Texas Instruments MSP432P401R]?
+# Why a LaunchPad Music Library [for the Texas Instruments MSP432P401R]?
 
 [MSP-EXP432P401R](http://www.ti.com/tool/msp-exp432p401r "The Board Texas Instruments Demo'd for UCSD")
 
