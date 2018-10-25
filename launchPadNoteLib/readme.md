@@ -16,34 +16,34 @@ microcontroller to create musical tones with the Grove buzzer. I just
 restructured a few things and added some functions and we have a more expanded
 musical note library for buzzers!
 
-# Previous notes 
+# Previous Notes 
 
-Grove: Music Note Library
-    Uses tone() function to simulate music note generation.
+Grove: Music Note Library<br/>
+    Uses tone() function to simulate music note generation.<br/>
 
-Dec 2012: Created for Educational BoosterPack
-    buzzer Pin = 19
+Dec 2012: Created for Educational BoosterPack<br/>
+    buzzer Pin = 19 <br/>
 
-Dec 2013: Modified for Educational BoosterPack MK II
-    buzzer Pin = 40
+Dec 2013: Modified for Educational BoosterPack MK II<br/>
+    buzzer Pin = 40<br/>
 
-Jun 2016: Modified for Grove Buzzer
-    buzzer Pin = 40
+Jun 2016: Modified for Grove Buzzer<br/>
+    buzzer Pin = 40<br/>
 
-Oct 2018: Restructuring and optimizing by David Amante; 
-    Original work by Dung Dang
+Oct 2018: Restructuring and optimizing by David Amante; <br>
+    Original work by Dung Dang<br/>
 
 # Technical Notes
 
 Just to clarify, naming conventions are as follows: <br/>
-<XN#>: 
-    <Note letter, Natural/Sharp/Flat, Octave number>
-    Example: CS1 == (C-sharp, octave 1)
-    Example: DN6 == (D-natural, octave 6)
+<XN#>: <br/>
+    <Note letter, Natural/Sharp/Flat, Octave number><br/>
+    Example: CS1 == (C-sharp, octave 1)<br/>
+    Example: DN6 == (D-natural, octave 6)<br/>
 
 Why are these note frequencies whole numbers?
-    This is because of the Tone() definition by Arduino. The frequency variables
-    are defined by an unsigned int, which are by definition whole numbers.
+>   This is because of the Tone() definition by Arduino. The frequency variables
+>   are defined by an unsigned int, which are by definition whole numbers.
 
 # What next?
 
@@ -57,4 +57,5 @@ Maybe after midterm season I can implement that structure.
 [1] Why use const instead of #define: https://stackoverflow.com/questions/6442328/what-is-the-difference-between-define-and-const <br/>
 [2] Definition of Arduino's Tone() function: https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/ <br/>
 [3] The note-to-frequency value reference: https://pages.mtu.edu/~suits/notefreqs.html <br/>
+
 Thanks for checking out this sketch/library of mine (original work by Dung Dang)! Much love.
