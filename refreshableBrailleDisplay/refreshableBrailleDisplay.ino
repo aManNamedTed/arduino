@@ -97,10 +97,54 @@ class BrailleLetter {
   void BrailleLetter::writeBut();
 
   // Contractions beginning with 'C'
+  void BrailleLetter::writeCan();
+  void BrailleLetter::writeCannot();
+  void BrailleLetter::write_CC_();
+  void BrailleLetter::writeCh();
+  void BrailleLetter::writeCharacter();
+  void BrailleLetter::writeChild();
+  void BrailleLetter::writeChildren();
+  void BrailleLetter::writeCon_();
+  void BrailleLetter::writeConceive();
+  void BrailleLetter::writeConceiving();
+  void BrailleLetter::writeCould();
+
   // Contractions beginning with 'D'
+  void BrailleLetter::writeDay();
+  void BrailleLetter::writeDeceive();
+  void BrailleLetter::writeDeceiving();
+  void BrailleLetter::writeDeclare();
+  void BrailleLetter::writeDeclaring();
+  void BrailleLetter::writeDis_();
+  void BrailleLetter::writeDo();
+
   // Contractions beginning with 'E'
+  void BrailleLetter::write_EA_();
+  void BrailleLetter::writeEd();
+  void BrailleLetter::writeEither();
+  void BrailleLetter::writeEn();
+  void BrailleLetter::write_Ence();
+  void BrailleLetter::writeEnough();
+  void BrailleLetter::writeEr();
+  void BrailleLetter::writeEver();
+  void BrailleLetter::writeEvery();
+
   // Contractions beginning with 'F'
+  void BrailleLetter::writeFather();
+  void BrailleLetter::write_FF_();
+  void BrailleLetter::writeFirst();
+  void BrailleLetter::writeFor();
+  void BrailleLetter::writeFriend();
+  void BrailleLetter::writeFrom();
+  void BrailleLetter::write_Ful();
+
   // Contractions beginning with 'G'
+  void BrailleLetter::write_GG_();
+  void BrailleLetter::writeGh();
+  void BrailleLetter::writeGo();
+  void BrailleLetter::writeGood();
+  void BrailleLetter::writeGreat();
+
   // Contractions beginning with 'H'
   // Contractions beginning with 'I'
   // Contractions beginning with 'J'
@@ -117,9 +161,7 @@ class BrailleLetter {
   // Contractions beginning with 'U'
   // Contractions beginning with 'V'
   // Contractions beginning with 'W'
-  // Contractions beginning with 'X'
   // Contractions beginning with 'Y'
-  // Contractions beginning with 'Z'
 
   // Main driver function for converting string to Braille output
   void BrailleLetter::writeCustom(String str);
@@ -472,7 +514,7 @@ void BrailleLetter::writeHyphen() {
 // Begin UEB Braille Chart from Duxbury Systems
 /*
   Contractions to add
-    B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+    C D E F G H I J K L M N O P Q R S T U V W Y
 
    New conventions for naming methods:
      use a _ in place of the triangles in the chart
@@ -706,13 +748,146 @@ void BrailleLetter::writeBut() {
   this->writeB();
 }
 
+// Begin contractions starting with C
+void BrailleLetter::writeCan() {
+  this->writeC();
+}
+
+void BrailleLetter::writeCannot() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeC();
+}
+
+void BrailleLetter::write_CC_() {
+  nub2.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeCh() {
+  nub1.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeCharacter() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeChild() {
+  nub1.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeChildren(){ 
+  nub1.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeN();
+}
+
+void BrailleLetter::writeCon_() {
+  nub2.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeConceive() {
+  nub2.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeC();
+  this->clearNubs();
+  this->writeV();
+}
+
+void BrailleLetter::writeConceiving() {
+  this->writeConceive();
+  this->clear_nubs();
+  this->writeG();
+}
+
+void BrailleLetter::writeCould() {
+  this->writeC();
+  this->clearNubs();
+  this->writeD();
+}
+
 void BrailleLetter::writeCustom(String str) {
   for(char &ch : str)
   {
     this->writeChar(ch);
-    this->clearNubs();
   }
 }
+
+// Begin contractions starting with D
+void BrailleLetter::writeDay() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeD();
+}
+
+void BrailleLetter::writeDeceive() {
+  this->writeD();
+  this->clearNubs();
+  this->writeC();
+  this->clearNubs();
+  this->writeV();
+}
+
+void BrailleLetter::writeDeceiving() {
+  this->writeDeceive();
+  this->clearNubs();
+  this->writeG();
+}
+
+void BrailleLetter::writeDeclare() {
+  this->writeD();
+  this->clearNubs();
+  this->writeC();
+  this->clearNubs();
+  this->writeL();
+}
+
+void BrailleLetter::writeDeclaring() {
+  this->writeDeclare();
+  this->clearNubs();
+  this->writeG();
+}
+
+void BrailleLetter::writeDis_() {
+  nub2.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeDo() {
+  this->writeD();
+}
+
+// Begin contractions starting with E
+// Begin contractions starting with F
+// Begin contractions starting with G
+// Begin contractions starting with H
+// Begin contractions starting with I
+// Begin contractions starting with J
+// Begin contractions starting with K
+// Begin contractions starting with L
+// Begin contractions starting with M
+// Begin contractions starting with N
+// Begin contractions starting with O
+// Begin contractions starting with P
+// Begin contractions starting with Q
+// Begin contractions starting with S
+// Begin contractions starting with T
+// Begin contractions starting with U
+// Begin contractions starting with V
+// Begin contractions starting with W
+// Begin contractions starting with Y
+// Begin contractions starting with Z
 
 void BrailleLetter::clearNubs() {
   delay(CHAR_DELAY);
@@ -883,6 +1058,7 @@ void BrailleLetter::writeChar(char ch)
   else if(ch == '-') {
     this->writeHyphen();
   }  
+  this->clearNubs();
 }
 
 BrailleLetter letter;
