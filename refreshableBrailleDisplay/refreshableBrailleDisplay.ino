@@ -131,6 +131,7 @@ class BrailleLetter {
 
 void BrailleLetter::writeA() {
   nub1.write(LEFT_NUB);
+
 }
 
 void BrailleLetter::writeB() {
