@@ -633,6 +633,7 @@ void BrailleLetter::writeModifiedB() {
 
 // START HERE TODO:
 void BrailleLetter::write_BB_() {
+  
 }
 
 void BrailleLetter::writeBe_() {
