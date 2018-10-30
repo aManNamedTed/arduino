@@ -869,6 +869,58 @@ void BrailleLetter::writeDo() {
 }
 
 // Begin contractions starting with E
+void BrailleLetter::write_EA_() {
+  nub2.write(LEFT_NUB);
+}
+
+void BrailleLetter::writeEd() {
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeEither() {
+  this->writeE();
+  this->clearNubs();
+  this->writeI();
+}
+
+void BrailleLetter::writeEn() {
+  nub2.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::write_Ence() {
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeE();
+}
+
+void BrailleLetter::writeEnough() {
+  nub2.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeEr() {
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeEver() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeE();
+}
+
+void BrailleLetter::writeEvery() {
+  this->writeE();
+}
+
 // Begin contractions starting with F
 // Begin contractions starting with G
 // Begin contractions starting with H
