@@ -81,7 +81,7 @@ class BrailleLetter {
   void BrailleLetter::writeAs();
 
   // Contractions beginning with 'B'
-  void BrailleLetter::writeModifiedB();
+  void BrailleLetter::writeBModifier();
   void BrailleLetter::write_BB_();
   void BrailleLetter::writeBe_();
   void BrailleLetter::writeBecause();
@@ -627,50 +627,84 @@ void BrailleLetter::writeAs() {
 }
 
 // Start contractions starting with B
-void BrailleLetter::writeModifiedB() {
+void BrailleLetter::writeBModifier() {
   nub2.write(LEFT_NUB);
   nub3.write(LEFT_NUB);
 }
 
-// START HERE TODO:
 void BrailleLetter::write_BB_() {
-  
+  this->writeBModifier();
 }
 
 void BrailleLetter::writeBe_() {
-  //figure out how to do underlined and next-to-letter functions
-  //include below in a .h file? is that possible with .ino files?
-  //#define BrailleLetter::writeBe(), BrailleLetter::WriteBe();
-  this->write_BB_();
+  this->writeBModifier();
 }
 
 void BrailleLetter::writeBecause() {
-  // need to create 
-
+  this->writeBModifier();
+  this->clearNubs();
+  this->writeC();
 }
 
 void BrailleLetter::writeBefore() {
-
+  this->writeBModifier();
+  this->clearNubs();
+  this->writeF();
 }
 
 void BrailleLetter::writeBehind() {
-
+  this->writeBModifier();
+  this->clearNubs();
+  this->writeH();
 }
 
 void BrailleLetter::writeBelow() {
-
+  this->writeBModifier();
+  this->clearNubs();
+  this->writeL();
 }
 
 void BrailleLetter::writeBeneath() {
-
+  this->writeBModifier();
+  this->clearNubs();
+  this->writeN();
 }
 
-void BrailleLetter::writeBeside() {}
-void BrailleLetter::writeBetween() {}
-void BrailleLetter::writeBeyond() {}
-void BrailleLetter::writeBlind() {}
-void BrailleLetter::writeBraille() {}
-void BrailleLetter::writeBut() {}
+void BrailleLetter::writeBeside() {
+  this->writeBModifier();
+  this->clearNubs();
+  this->writeS();
+}
+
+void BrailleLetter::writeBetween() {
+  this->writeBModifier();
+  this->clearNubs();
+  this->writeT();
+}
+
+void BrailleLetter::writeBeyond() {
+  this->writeBModifier();
+  this->clearNubs();
+  this->writeY();
+}
+
+void BrailleLetter::writeBlind() {
+  this->writeB();
+  this->clearNubs();
+  this->writeL();
+}
+
+void BrailleLetter::writeBraille() {
+  this->writeB();
+  this->clearNubs();
+  this->writeR();
+  this->clearNubs();
+  this->writeL();
+}
+
+void BrailleLetter::writeBut() {
+  this->writeB();
+}
 
 void BrailleLetter::writeCustom(String str) {
   for(char &ch : str)
