@@ -145,13 +145,55 @@ class BrailleLetter {
   void BrailleLetter::writeGood();
   void BrailleLetter::writeGreat();
 
+//////////////////////////////////////////////start below
   // Contractions beginning with 'H'
+  void BrailleLetter::writeHad();
+  void BrailleLetter::writeHave();
+  void BrailleLetter::writeHere();
+  void BrailleLetter::writeHerself();
+  void BrailleLetter::writeHim();
+  void BrailleLetter::writeHimself();
+  void BrailleLetter::writeHis();
+
   // Contractions beginning with 'I'
+  void BrailleLetter::writeImmediate();
+  void BrailleLetter::writeIn();
+  void BrailleLetter::writeIng();
+  void BrailleLetter::writeIt();
+  void BrailleLetter::writeIts();
+  void BrailleLetter::writeItself();
+  void BrailleLetter::write_Ity();
+
   // Contractions beginning with 'J'
+  void BrailleLetter::writeJust();
+
   // Contractions beginning with 'K'
+  void BrailleLetter::writeKnow();
+  void BrailleLetter::writeKnowledge();
+
   // Contractions beginning with 'L'
+  void BrailleLetter::write_Less();
+  void BrailleLetter::writeLetter();
+  void BrailleLetter::writeLike();
+  void BrailleLetter::writeLittle();
+  void BrailleLetter::writeLord();
+
   // Contractions beginning with 'M'
+  void BrailleLetter::writeMany();
+  void BrailleLetter::write_Ment();
+  void BrailleLetter::writeMore();
+  void BrailleLetter::writeMother();
+  void BrailleLetter::writeMuch();
+  void BrailleLetter::writeMust();
+  void BrailleLetter::writeMyself();
+
   // Contractions beginning with 'N'
+  void BrailleLetter::writeName();
+  void BrailleLetter::writeNecessary();
+  void BrailleLetter::writeNeither();
+  void BrailleLetter::write_Ness();
+  void BrailleLetter::writeNot();
+
   // Contractions beginning with 'O'
   // Contractions beginning with 'P'
   // Contractions beginning with 'Q'
@@ -922,14 +964,165 @@ void BrailleLetter::writeEvery() {
 }
 
 // Begin contractions starting with F
+void BrailleLetter::writeFather() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeF();
+}
+
+void BrailleLetter::write_FF_() {
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeFirst() {
+  this->writeF();
+  this->clearNubs();
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeFor() {
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeFriend() {
+  this->writeF();
+  this->clearNubs();
+  this->writeR();
+}
+
+void BrailleLetter::writeFrom() {
+  this->writeF();
+}
+
+void BrailleLetter::write_Ful() {
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeL();
+}
+
 // Begin contractions starting with G
+void BrailleLetter::write_GG_() {
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeGh() {
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeGo() {
+  this->writeG();
+}
+
+void BrailleLetter::writeGood() {
+  this->writeG();
+  this->clearNubs();
+  this->writeD();
+}
+
+void BrailleLetter::writeGreat() {
+  this->writeG();
+  this->clearNubs();
+  this->writeR();
+  this->clearNubs();
+  this->writeT();
+}
+
 // Begin contractions starting with H
+void BrailleLetter::writeHad() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeH();
+}
+
+void BrailleLetter::writeHave() {
+  this->writeH();
+}
+
+void BrailleLetter::writeHere() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeH();
+}
+
+void BrailleLetter::writeHerself() {
+  this->writeH();
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeF();
+}
+
+void BrailleLetter::writeHim() {
+  this->writeH();
+  this->clearNubs();
+  this->writeM();
+}
+
+void BrailleLetter::writeHimself() {
+  this->writeHim();
+  this->clearNubs();
+  this->writeF();
+}
+
+void BrailleLetter::writeHis() {
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
 // Begin contractions starting with I
+void BrailleLetter::writeImmediate();
+void BrailleLetter::writeIn();
+void BrailleLetter::writeIng();
+void BrailleLetter::writeIt();
+void BrailleLetter::writeIts();
+void BrailleLetter::writeItself();
+void BrailleLetter::write_Ity();
 // Begin contractions starting with J
+void BrailleLetter::writeJust();
 // Begin contractions starting with K
+void BrailleLetter::writeKnow();
+void BrailleLetter::writeKnowledge();
 // Begin contractions starting with L
+void BrailleLetter::write_Less();
+void BrailleLetter::writeLetter();
+void BrailleLetter::writeLike();
+void BrailleLetter::writeLittle();
+void BrailleLetter::writeLord();
 // Begin contractions starting with M
+void BrailleLetter::writeMany();
+void BrailleLetter::write_Ment();
+void BrailleLetter::writeMore();
+void BrailleLetter::writeMother();
+void BrailleLetter::writeMuch();
+void BrailleLetter::writeMust();
+void BrailleLetter::writeMyself();
 // Begin contractions starting with N
+void BrailleLetter::writeName();
+void BrailleLetter::writeNecessary();
+void BrailleLetter::writeNeither();
+void BrailleLetter::write_Ness();
+void BrailleLetter::writeNot();
 // Begin contractions starting with O
 // Begin contractions starting with P
 // Begin contractions starting with Q
