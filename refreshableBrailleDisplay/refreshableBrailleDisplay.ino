@@ -58,7 +58,7 @@ class BrailleLetter {
   void BrailleLetter::writeForwardSlash();
   void BrailleLetter::writeBackSlash();
   void BrailleLetter::writeHyphen();
-  // extra punctuation TODO:
+  // extra punctuation TODO://///////////////////////////
   void BrailleLetter::writeAsterisk();
   void BrailleLetter::writeBracket_();
   void BrailleLetter::write_Bracket();
@@ -280,25 +280,25 @@ class BrailleLetter {
   void BrailleLetter::writeVery();
 
   // Contractions beginning with 'W'
-  void BrailleLetter::write();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
+  void BrailleLetter::writeWas();
+  void BrailleLetter::writeWere();
+  void BrailleLetter::writeWh();
+  void BrailleLetter::writeWhere();
+  void BrailleLetter::writeWhich();
+  void BrailleLetter::writeWhose();
+  void BrailleLetter::writeWith();
+  void BrailleLetter::writeWill();
+  void BrailleLetter::writeWord();
+  void BrailleLetter::writeWork();
+  void BrailleLetter::writeWorld();
+  void BrailleLetter::writeWould();
 
   // Contractions beginning with 'Y'
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
-  void BrailleLetter::writeNot();
+  void BrailleLetter::writeYou();
+  void BrailleLetter::writeYoung();
+  void BrailleLetter::writeYour();
+  void BrailleLetter::writeYourself();
+  void BrailleLetter::writeYourselves();
 
   // Main driver function for converting string to Braille output
   void BrailleLetter::writeCustom(String str);
@@ -1357,14 +1357,453 @@ void BrailleLetter::writeNot() {
 }
 
 // Begin contractions starting with O
+void BrailleLetter::writeOf() {
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeOne() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeO();
+}
+
+void BrailleLetter::writeOneself() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeO();
+  this->clearNubs();
+  this->writeF();
+}
+
+void BrailleLetter::write_Ong() {
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeG();
+}
+
+void BrailleLetter::writeOu() {
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeOught() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeOu();
+}
+
+void BrailleLetter::write_Ound() {
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeD();
+}
+
+void BrailleLetter::write_Ount() {
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeT();
+}
+
+void BrailleLetter::writeOurselves() {
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeR();
+  this->clearNubs();
+  this->writeV();
+  this->clearNubs();
+  this->writeS();
+}
+
+void BrailleLetter::writeOut() {
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeOw() {
+  nub2.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
 // Begin contractions starting with P
+void BrailleLetter::writePaid() {
+  this->writeP();
+  this->clearNubs();
+  this->writeD();
+}
+
+void BrailleLetter::writePart() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeP();
+}
+
+void BrailleLetter::writePeople() {
+  this->writeP();
+}
+
+void BrailleLetter::writePerceive() {
+  this->writeP();
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeC();
+  this->clearNubs();
+  this->writeV();
+}
+
+void BrailleLetter::writePerceiving() {
+  this->writePerceive();
+  this->clearNubs();
+  this->writeG();
+}
+
+void BrailleLetter::writePerhaps() {
+  this->writeP();
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeH();
+}
+
 // Begin contractions starting with Q
+void BrailleLetter::writeQuestion() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeQ();
+}
+
+void BrailleLetter::writeQuick() {
+  this->writeQ();
+  this->clearNubs();
+  this->writeK();
+}
+
+void BrailleLetter::writeQuite() {
+  this->writeQ();
+}
+
+// Begin contractions starting with R
+void BrailleLetter::writeRather() {
+  this->writeR();
+}
+
+void BrailleLetter::writeReceive() {
+  this->writeR();
+  this->clearNubs();
+  this->writeC();
+  this->clearNubs();
+  this->writeV();
+}
+
+void BrailleLetter::writeReceiving() {
+  this->writeReceive();
+  this->clearNubs();
+  this->writeG();
+}
+
+void BrailleLetter::writeRejoice() {
+  this->writeR();
+  this->clearNubs();
+  this->writeJ();
+  this->clearNubs();
+  this->writeC();
+}
+
+void BrailleLetter::writeRejoicing() {
+  this->writeRejoice();
+  this->clearNubs();
+  this->writeG();
+}
+
+void BrailleLetter::writeRight() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeR();
+}
+
 // Begin contractions starting with S
+void BrailleLetter::writeSaid() {
+  this->writeS();
+  this->clearNubs();
+  this->writeD();
+}
+
+void BrailleLetter::writeSh() {
+  nub1.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeShall() {
+  this->writeSh();
+}
+
+void BrailleLetter::writeShould() {
+  this->writeSh();
+  this->clearNubs();
+  this->writeD();
+}
+
+void BrailleLetter::write_Sion() {
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeN();
+}
+
+void BrailleLetter::writeSo() {
+  this->writeS();
+}
+
+void BrailleLetter::writeSome() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeS();
+}
+
+void BrailleLetter::writeSpirit() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeS();
+}
+
+void BrailleLetter::writeSt() {
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeStill() {
+  this->writeSt();
+}
+
+void BrailleLetter::writeSuch() {
+  this->writeS();
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
 // Begin contractions starting with T
+void BrailleLetter::writeTh(); 
+void BrailleLetter::writeThat(); 
+void BrailleLetter::writeThe();
+void BrailleLetter::writeTheir();
+void BrailleLetter::writeThemselves();
+void BrailleLetter::writeThere();
+void BrailleLetter::writeThese();
+void BrailleLetter::writeThis();
+void BrailleLetter::writeThose();
+void BrailleLetter::writeThrough();
+void BrailleLetter::writeThyself();
+void BrailleLetter::writeTime();
+void BrailleLetter::write_Tion();
+void BrailleLetter::writeToday();
+void BrailleLetter::writeTogether();
+void BrailleLetter::writeTomorrow();
+void BrailleLetter::writeTonight();
+
 // Begin contractions starting with U
+void BrailleLetter::writeUnder() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeU();
+}
+
+void BrailleLetter::writeUpon() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeU();
+}
+
+void BrailleLetter::writeUs() {
+  this->writeU();
+}
+
 // Begin contractions starting with V
+void BrailleLetter::writeVery() {
+  this->writeV();
+}
+
 // Begin contractions starting with W
+void BrailleLetter::writeWas() {
+  nub3.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeWere() {
+  nub2.write(LEFT_NUB):
+  nub3.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeWh() {
+  nub1.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeWhere() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeWh();
+}
+
+void BrailleLetter::writeWhich() {
+  this->writeWh();
+}
+
+void BrailleLetter::writeWhose() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeWh();
+}
+
+void BrailleLetter::writeWill() {
+  this->writeW();
+}
+
+void BrailleLetter::writeWith() {
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeWord() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeW();
+}
+
+void BrailleLetter::writeWork() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeW();
+}
+
+void BrailleLetter::writeWorld() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeW();
+}
+
+void BrailleLetter::writeWould() {
+  this->writeW();
+  this->clearNubs();
+  this->writeD();
+}
+
 // Begin contractions starting with Y
+void BrailleLetter::writeYou() {
+  this->writeY();
+}
+
+void BrailleLetter::writeYoung() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeY();
+}
+
+void BrailleLetter::writeYour() {
+  this->writeY();
+  this->clearNubs();
+  this->writeR();
+}
+
+void BrailleLetter::writeYourself() {
+  this->writeY();
+  this->clearNubs();
+  this->writeR();
+  this->clearNubs();
+  this->writeF();
+}
+
+void BrailleLetter::writeYourselves() {
+  this->writeY();
+  this->clearNubs();
+  this->writeR();
+  this->clearNubs();
+  this->writeV();
+}
+void BrailleLetter::writeWere();
+void BrailleLetter::writeWh();
+void BrailleLetter::writeWhere();
+void BrailleLetter::writeWhich();
+void BrailleLetter::writeWhose();
+void BrailleLetter::writeWith();
+void BrailleLetter::writeWill();
+void BrailleLetter::writeWord();
+void BrailleLetter::writeWork();
+void BrailleLetter::writeWorld();
+void BrailleLetter::writeWould();
+
+// Begin contractions starting with Y
+void BrailleLetter::writeYou() {
+  this->writeY();
+}
+
+void BrailleLetter::writeYoung() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeY();
+}
+
+void BrailleLetter::writeYour() {
+  this->writeY();
+  this->clearNubs();
+  this->writeR();
+}
+
+void BrailleLetter::writeYourself() {
+  this->writeY();
+  this->clearNubs();
+  this->writeR();
+  this->clearNubs();
+  this->writeF();
+}
+
+void BrailleLetter::writeYourselves() {
+  this->writeY();
+  this->clearNubs();
+  this->writeR();
+  this->clearNubs();
+  this->writeV();
+  this->clearNubs();
+  this->writeS();
+}
 
 void BrailleLetter::clearNubs() {
   delay(CHAR_DELAY);
