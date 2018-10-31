@@ -58,6 +58,17 @@ class BrailleLetter {
   void BrailleLetter::writeForwardSlash();
   void BrailleLetter::writeBackSlash();
   void BrailleLetter::writeHyphen();
+  // extra punctuation TODO:
+  void BrailleLetter::writeAsterisk();
+  void BrailleLetter::writeBracket_();
+  void BrailleLetter::write_Bracket();
+  void BrailleLetter::writeBritishPound();
+  void BrailleLetter::writeDash();
+  void BrailleLetter::writeDecimalPoint();
+  void BrailleLetter::writeDollar();
+  void BrailleLetter::writeEllipsis();
+  void BrailleLetter::writeEuro();
+  void BrailleLetter::writeYen();
 
   // Contractions beginning with 'A'
   void BrailleLetter::writeAbout();
@@ -145,7 +156,6 @@ class BrailleLetter {
   void BrailleLetter::writeGood();
   void BrailleLetter::writeGreat();
 
-//////////////////////////////////////////////start below
   // Contractions beginning with 'H'
   void BrailleLetter::writeHad();
   void BrailleLetter::writeHave();
@@ -194,16 +204,101 @@ class BrailleLetter {
   void BrailleLetter::write_Ness();
   void BrailleLetter::writeNot();
 
+//TODO: Need to define the functions below
   // Contractions beginning with 'O'
+  void BrailleLetter::writeOf();
+  void BrailleLetter::writeOne();
+  void BrailleLetter::writeOneself();
+  void BrailleLetter::write_Ong();
+  void BrailleLetter::writeOu();
+  void BrailleLetter::writeOught();
+  void BrailleLetter::write_Ound();
+  void BrailleLetter::write_Ount();
+  void BrailleLetter::writeOurselves();
+  void BrailleLetter::writeOut();
+  void BrailleLetter::writeOw();
+
   // Contractions beginning with 'P'
+  void BrailleLetter::writePaid();
+  void BrailleLetter::writePart();
+  void BrailleLetter::writePeople();
+  void BrailleLetter::writePerceive();
+  void BrailleLetter::writePerceiving();
+  void BrailleLetter::writePerhaps();
+
   // Contractions beginning with 'Q'
+  void BrailleLetter::writeQuestion();
+  void BrailleLetter::writeQuick();
+  void BrailleLetter::writeQuite();
+
   // Contractions beginning with 'R'
+  void BrailleLetter::writeRather();
+  void BrailleLetter::writeReceive();
+  void BrailleLetter::writeReceiving();
+  void BrailleLetter::writeRejoice();
+  void BrailleLetter::writeRejoicing();
+  void BrailleLetter::writeRight();
+
   // Contractions beginning with 'S'
+  void BrailleLetter::writeSaid();
+  void BrailleLetter::writeSh();
+  void BrailleLetter::writeShall();
+  void BrailleLetter::writeShould();
+  void BrailleLetter::write_Sion();
+  void BrailleLetter::writeSo();
+  void BrailleLetter::writeSome();
+  void BrailleLetter::writeSpirit();
+  void BrailleLetter::writeSt();
+  void BrailleLetter::writeStill();
+  void BrailleLetter::writeSuch();
+
   // Contractions beginning with 'T'
+  void BrailleLetter::writeTh();
+  void BrailleLetter::writeThat();
+  void BrailleLetter::writeThe();
+  void BrailleLetter::writeTheir();
+  void BrailleLetter::writeThemselves();
+  void BrailleLetter::writeThere();
+  void BrailleLetter::writeThese();
+  void BrailleLetter::writeThis();
+  void BrailleLetter::writeThose();
+  void BrailleLetter::writeThrough();
+  void BrailleLetter::writeThyself();
+  void BrailleLetter::writeTime();
+  void BrailleLetter::write_Tion();
+  void BrailleLetter::writeToday();
+  void BrailleLetter::writeTogether();
+  void BrailleLetter::writeTomorrow();
+  void BrailleLetter::writeTonight();
+
   // Contractions beginning with 'U'
+  void BrailleLetter::writeUnder();
+  void BrailleLetter::writeUpon();
+  void BrailleLetter::writeUs();
+
   // Contractions beginning with 'V'
+  void BrailleLetter::writeVery();
+
   // Contractions beginning with 'W'
+  void BrailleLetter::write();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+
   // Contractions beginning with 'Y'
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
+  void BrailleLetter::writeNot();
 
   // Main driver function for converting string to Braille output
   void BrailleLetter::writeCustom(String str);
@@ -556,7 +651,7 @@ void BrailleLetter::writeHyphen() {
 // Begin UEB Braille Chart from Duxbury Systems
 /*
   Contractions to add
-    C D E F G H I J K L M N O P Q R S T U V W Y
+    O P Q R S T U V W Y
 
    New conventions for naming methods:
      use a _ in place of the triangles in the chart
