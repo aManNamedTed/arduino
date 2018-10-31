@@ -58,7 +58,6 @@ class BrailleLetter {
   void BrailleLetter::writeForwardSlash();
   void BrailleLetter::writeBackSlash();
   void BrailleLetter::writeHyphen();
-  // extra punctuation TODO://///////////////////////////
   void BrailleLetter::writeAsterisk();
   void BrailleLetter::writeBracket_();
   void BrailleLetter::write_Bracket();
@@ -646,16 +645,84 @@ void BrailleLetter::writeHyphen() {
   nub6.write(RIGHT_NUB);
 }
 
+void BrailleLetter::writeAsterisk() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  nub3.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeBracket_() {
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::write_Bracket() {
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeBritishPound() {
+  nub4.write(RIGHT_NUB);
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+}
+
+void BrailleLetter::writeDash() {
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  nub3.write(LEFT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::write_DecimalPoint_() {
+  this->writePeriod();
+}
+
+void BrailleLetter::writeDollar() {
+  nub4.write(RIGHT_NUB);
+  this->clearNubs();
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeEllipsis() {
+  this->writePeriod();
+  this->clearNubs();
+  this->writePeriod();
+  this->clearNubs();
+  this->writePeriod();
+}
+
+void BrailleLetter::writeEuro() {
+  nub4.write(RIGHT_NUB);
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub5.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeYen() {
+  nub4.write(RIGHT_NUB);
+  this->clearNubs();
+  nub1.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
 
 // Begin UEB Braille Chart from Duxbury Systems
-/*
-  Contractions to add
-    O P Q R S T U V W Y
-
-   New conventions for naming methods:
-     use a _ in place of the triangles in the chart
-     so __ or _
-*/
 // Begin contractions starting with A
 void BrailleLetter::writeAbout() {
   this->writeA();

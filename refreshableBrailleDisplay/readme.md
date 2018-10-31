@@ -8,6 +8,22 @@ Keep in mind that this is simply a proof of concept, and not a complete, workabl
 <h8>(the above says "Hello world!" in braille!!)</h8><br/><br/>
 To show that this thing is possible to make! Modern devices make a premium on this technology, which is insane! The point of making this is to show a proof-of-concept that this kind of device does not have to cost $1000. I just want this to be a useful library to as many people as possible.
 
+Update October 30, 2018: <br/>
+I finished expanding the library to include contractions. So now I will add the rest of
+the new punctuation, and then I need to work on how the string is parsed for the display.
+I think I will use a Trie to check the next (7? maybe) characters and then print the
+correct contraction or character(s). I think I'll use a constant value of look-behind and
+look-ahead characters because you can only go so far before running into an empty
+character... right? If that is correct then a constant length of look-ahead should work
+just fine with a trie. Also! I will use the UEB Braille Chart for Duxbury Systems'
+convention for detecting preceding and succeeding letters or characters by using a single
+underscore to represent letter neighbors, and two underscores for word neighbors. <br/>
+
+Also I am receiving a Texas Instruments board to prototype with and I'll be submitting
+custom libraries to them for funsies in the coming month! First will be that buzzer note
+library for sure, and then probably something else fun--I just don't know what else yet.
+Yeah! Fun. <br/>
+
 # The SD Hacks Submission Description
 
 ## Inspiration
