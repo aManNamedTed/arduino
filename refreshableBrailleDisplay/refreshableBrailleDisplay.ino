@@ -204,7 +204,6 @@ class BrailleLetter {
   void BrailleLetter::write_Ness();
   void BrailleLetter::writeNot();
 
-//TODO: Need to define the functions below
   // Contractions beginning with 'O'
   void BrailleLetter::writeOf();
   void BrailleLetter::writeOne();
@@ -1609,23 +1608,121 @@ void BrailleLetter::writeSuch() {
 }
 
 // Begin contractions starting with T
-void BrailleLetter::writeTh(); 
-void BrailleLetter::writeThat(); 
-void BrailleLetter::writeThe();
-void BrailleLetter::writeTheir();
-void BrailleLetter::writeThemselves();
-void BrailleLetter::writeThere();
-void BrailleLetter::writeThese();
-void BrailleLetter::writeThis();
-void BrailleLetter::writeThose();
-void BrailleLetter::writeThrough();
-void BrailleLetter::writeThyself();
-void BrailleLetter::writeTime();
-void BrailleLetter::write_Tion();
-void BrailleLetter::writeToday();
-void BrailleLetter::writeTogether();
-void BrailleLetter::writeTomorrow();
-void BrailleLetter::writeTonight();
+void BrailleLetter::writeTh() {
+  nub1.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+} 
+
+void BrailleLetter::writeThat() {
+  this->writeT();
+}
+
+void BrailleLetter::writeThe() {
+  nub2.write(LEFT_NUB);
+  nub3.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeTheir() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeThe();
+}
+
+void BrailleLetter::writeThemselves() {
+  this->writeThe();
+  this->clearNubs();
+  this->writeM();
+  this->clearNubs();
+  this->writeV();
+  this->clearNubs();
+  this->writeS();
+}
+
+void BrailleLetter::writeThere() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeThe();
+}
+
+void BrailleLetter::writeThese() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeThe();
+}
+
+void BrailleLetter::writeThis() {
+  nub1.write(LEFT_NUB);
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+}
+
+void BrailleLetter::writeThose() {
+  nub4.write(RIGHT_NUB);
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeThis();
+}
+
+void BrailleLetter::writeThrough() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeThis();
+}
+
+void BrailleLetter::writeThyself() {
+  this->writeThis();
+  this->clearNubs();
+  this->writeY();
+  this->clearNubs();
+  this->writeF();
+}
+
+void BrailleLetter::writeTime() {
+  nub5.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeT();
+}
+
+void BrailleLetter::write_Tion() {
+  nub5.write(RIGHT_NUB);
+  nub6.write(RIGHT_NUB);
+  this->clearNubs();
+  this->writeN();
+}
+
+void BrailleLetter::writeToday() {
+  this->writeT();
+  this->clearNubs();
+  this->writeD();
+}
+
+void BrailleLetter::writeTogether() {
+  this->writeT();
+  this->clearNubs();
+  this->writeG();
+  this->clearNubs();
+  this->writeR();
+}
+
+void BrailleLetter::writeTomorrow() {
+  this->writeT();
+  this->clearNubs();
+  this->writeM();
+}
+
+void BrailleLetter::writeTonight() {
+  this->writeT();
+  this->clearNubs();
+  this->writeN();
+}
 
 // Begin contractions starting with U
 void BrailleLetter::writeUnder() {
