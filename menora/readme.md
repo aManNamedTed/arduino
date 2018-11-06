@@ -6,3 +6,6 @@ I think for now I'm going to make them flicker, offset, then try to do the senso
 
 For now, flicker function writing time! 
 - 9:25PM
+
+# Credit
+How to wire up an RGB LED: https://www.youtube.com/watch?v=5Qi93MjlqzE&t=257s
