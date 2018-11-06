@@ -15,6 +15,11 @@ WELL I guess random would work just fine. So the flicker looks good. I just rest
 SO NOW i have this cool idea i'm gonna try. I'm gonna put the ultrasonic sensor on this boy, and when i get close to it, i'll make it such that the leds will flicker on the lower end of the range so like 5 to 65 so that it looks like it's reacting to the motion/closeness. but i'll make it so that it only goes on for a second and then returns to normal random generations.
 - 9:49PM
 
+### Log Entry [2]
+
+Getting tired. Gonna hang it up until tomorrow to finish the button that will cycle through the amount of candles that are 'lit'.
+- 10:22PM
+
 # Credit
 [How to wire up an RGB LED](https://www.youtube.com/watch?v=5Qi93MjlqzE) <br/>
 [How to generate random number with range in Arduino](https://www.arduino.cc/reference/en/language/functions/random-numbers/random/)
