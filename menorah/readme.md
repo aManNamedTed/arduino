@@ -1,8 +1,8 @@
 ## Why a menorah?
 
-<img src="menora.jpg"/>
-<img src="menoraLit.gif"/>
-<img src="menoraStep.gif"/>
+<img src="menorah.jpg"/>
+<img src="menorahLit.gif"/>
+<img src="menorahStep.gif"/>
 
 Do you live in a living room? Do you worry that about burning the house down? Well this is
 the sketch for you! An electric menorah complete with Hanukkah day setting with a single
