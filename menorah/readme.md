@@ -4,11 +4,11 @@
 <img src="menorahLit.gif"/>
 <img src="menorahStep.gif"/>
 
-Do you live in a living room? Do you worry that about burning the house down? Well this is
-the sketch for you! An electric menorah complete with Hanukkah day setting with a single
-button, and full flicker effects! It's wonderful.
+Do you live in a living room? Do you worry about burning the house down? Well this is
+the sketch for you! An electric menorah complete with Hanukkah day-setting with a single
+button, and full flicker effects! It's wonderful. Also I'm about a month early, so I guess Happy [early] Hanukkah, Marv!
 
-I hope this can be useful to those tha need it!!
+I hope this can be useful to those that need it!!
 
 ## Build Progression Log
 ### Log Entry [0]
