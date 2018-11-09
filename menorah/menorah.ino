@@ -5,7 +5,6 @@ const int END_PIN = 13;  // leader candle pin
 const int LOWER_BOUND_FLICKER = 125;
 const int UPPER_BOUND_FLICKER = 256;
 const int LEDS = 9;
-const int FLICKER_LED_LIMIT = 6; // 6 candles flicker per cycle; look best imo
 int led[LEDS];
 int ledState[LEDS];
 int candlesOn = 0;
@@ -29,7 +28,7 @@ void setup() {
 }
 
 void loop() {
-  // keep the lights flickering in the meantime
+  // flicker only the lights which state is true
   for(int i = 0; i < LEDS; i++)
   {
     if(ledState[i] == true)
@@ -41,8 +40,9 @@ void loop() {
   
   // check the state of the button
   bool buttonState = digitalRead(BUTTON_PIN);
-  delay(111);
-  //check if button is on; if it is, turn the next candle on
+  delay(111); // helps with keeping button presses to turning on only one light
+
+  //check if button is pressed; if it is, turn the next candle on
   if(buttonState == HIGH && candlesOn == 0)
   {
     ledState[candlesOn] = true;
@@ -85,14 +85,13 @@ void loop() {
   }
   else if(buttonState == HIGH && candlesOn == 8)
   {
-    // 0 to LEDS - 1 because need to keep leader candle on,
-    // but needs to be included in the ledState array to flicker
-    // maybe i should use 
+    // 0 to (LEDS - 1) because we need to keep leader candle on,
+    // but also leader candle needs to be included in the ledState array to flicker
     for(int i = 0; i < LEDS - 1; i++)
     {
-      ledState[i] = false;
-      analogWrite(led[i], 0);
+      ledState[i] = false;    // update led state array
+      analogWrite(led[i], 0); // turn off led[i]
     }
-    candlesOn = 0;
+    candlesOn = 0; // update candlesOn (excluding leader candle)
   }
 }
