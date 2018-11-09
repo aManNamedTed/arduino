@@ -1,3 +1,16 @@
+## Why a menorah?
+
+<img src="menora.jpg"/>
+<img src="menoraLit.gif"/>
+<img src="menoraStep.gif"/>
+
+Do you live in a living room? Do you worry that about burning the house down? Well this is
+the sketch for you! An electric menorah complete with Hanukkah day setting with a single
+button, and full flicker effects! It's wonderful.
+
+I hope this can be useful to those tha need it!!
+
+## Build Progression Log
 ### Log Entry [0]
 So it's November 5th 2018, and I just learned that RGB LEDs distinct color fluctuations do not really register with the LED. So my idea was to use a(n) [Arduino] Mega and have the colors of the candles be RGB and cute but NO, using two colors for digitalWrite() and one for analogWrite() for those juicy RGB colors doesn't look all that great. So instead I am just going to use the Mega for its PWM slots and make a nice flicker function and have them offset on each candle so that it actually looks like--
 
