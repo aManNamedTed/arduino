@@ -1,4 +1,4 @@
-## 12-16-18
+# 12-16-18
 
 So yesterday I did this for about an hour or so and took initial measurements of my right hand to see how this will scale. 
 
@@ -16,6 +16,7 @@ I think I underestimated that measurement of how much clearance I needed because
 
 I actually totally muffed the measurements because I wasn't using a consistent reference point <i>per joint</i>. So now I'll just redo the measurements and put'm in a table.
 
+## Finger Dimensions
 <table>
   <tr>
     <th> Measurement </th>
@@ -103,7 +104,7 @@ So now that I have these measurements, I need to figure out how much I'm going t
 
 Next I should measure the range of motion per joint. I guess extended finger position will be 0 or baseline to simplify the different ranges of motion. So for example, extended finger servo position would be 0 degrees, and resting finger servo position for the index finger would be 12 degrees or so. Since these servos are based on a 180 degree range, I will constrain joint movement to 180 degrees (probably will have to be less because each specific joint doesn't really contribute THAT much range of motion).
 
-# TO BE MEASURED
+## TO BE MEASURED
 <table>
   <tr>
     <th> Measurement </th>
