@@ -26,7 +26,7 @@ I actually totally muffed the measurements because I wasn't using a consistent r
     <th> Pinky Finger </th>
   </tr>
   <tr>
-    <td> First Joint to Bottom of Palm Height [y axis] (mm) </td>
+    <th> First Joint to Bottom of Palm Height [y axis] (mm) </th>
     <td> N/A </td>
     <td> 96.5 </td>
     <td> 101 </td>
@@ -34,7 +34,7 @@ I actually totally muffed the measurements because I wasn't using a consistent r
     <td> 80 </td>    
   </tr>
   <tr>
-    <td> First Joint to Side of Palm Width [x axis] (mm) </td>
+    <th> First Joint to Side of Palm Width [x axis] (mm) </th>
     <td> 83 </td>
     <td> N/A </td>
     <td> N/A </td>
@@ -42,7 +42,7 @@ I actually totally muffed the measurements because I wasn't using a consistent r
     <td> N/A </td>    
   </tr>
   <tr>
-    <td> Degrees of Freedom (df) </td>
+    <th> Degrees of Freedom (df) </th>
     <td> 2 </td>
     <td> 3 </td>
     <td> 3 </td>
@@ -50,7 +50,7 @@ I actually totally muffed the measurements because I wasn't using a consistent r
     <td> 3 </td>    
   </tr>
   <tr>
-    <td> First Joint Height (mm) </td>
+    <th> First Joint Height (mm) </th>
     <td> 40 </td>
     <td> 26 </td>
     <td> 30 </td>
@@ -58,7 +58,7 @@ I actually totally muffed the measurements because I wasn't using a consistent r
     <td> 19 </td>    
   </tr>
   <tr>
-    <td> Second Joint Height (mm) </td>
+    <th> Second Joint Height (mm) </th>
     <td> 30 </td>
     <td> 19.5 </td>
     <td> 22 </td>
@@ -66,11 +66,69 @@ I actually totally muffed the measurements because I wasn't using a consistent r
     <td> 14 </td>    
   </tr>
   <tr>
-    <td> Third Joint Height (mm) </td>
+    <th> Third Joint Height (mm) </th>
     <td> N/A </td>
     <td> 27 </td>
     <td> 28 </td>
     <td> 27 </td>
     <td> 24 </td>    
+  </tr>
+  <tr>
+    <th> First Joint Width (mm) </th>
+    <td> 21 </td>
+    <td> 21 </td>
+    <td> 20 </td>
+    <td> 19 </td>
+    <td> 17.5 </td>    
+  </tr>
+  <tr>
+    <th> Second Joint Width (mm) </th>
+    <td> 21 </td>
+    <td> 18 </td>
+    <td> 18 </td>
+    <td> 16 </td>
+    <td> 16 </td>    
+  </tr>
+  <tr>
+    <th> Third Joint Width (mm) </th>
+    <td> N/A </td>
+    <td> 15.5 </td>
+    <td> 16 </td>
+    <td> 15 </td>
+    <td> 13 </td>    
+  </tr>
+</table>
+
+So now that I have these measurements, I need to figure out how much I'm going to scale the entire thing. I'm thinkin' that I could get away with about 1.75x or so. I would love to have a perfectly proportional replica that's scaled by 2x or 2.25x but I need to consider weight that can be adequately supported by the servos. Maybe I'll have to use styrofoam or something to lighten the fingers but we'll have to see.
+
+Next I should measure the range of motion per joint. I guess extended finger position will be 0 or baseline to simplify the different ranges of motion. So for example, extended finger servo position would be 0 degrees, and resting finger servo position for the index finger would be 12 degrees or so. Since these servos are based on a 180 degree range, I will constrain joint movement to 180 degrees (probably will have to be less because each specific joint doesn't really contribute THAT much range of motion).
+
+# TO BE MEASURED
+<table>
+  <tr>
+    <th> Measurement </th>
+    <th> Thumb </th>
+    <th> Index </th>
+    <th> Middle </th>
+    <th> Ring </th>
+    <th> Pinky </th>
+  </tr>
+  <tr>
+    <th> First Joint Resting (mm) </th>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <th> First Joint Flexion (mm) </th>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
   </tr>
 </table>
