@@ -14,10 +14,13 @@ I figure that because my servos are all 30mm, I would have to scale the product 
 
 I figure I can create a finger class that can inherit as many joints as possible that are needed. But for now I haven't really thought about that yet. It's just a gut design choice so far. So for now, I'm going to start on the palm stand right now.
 
-Update 1.1: I think I underestimated that measurement of how much clearance I needed because I didn't take into account the amount of material I'll use to simulate the actual finger so I might need 3mm. or more to get clearance. 
+### Update 1.1: 
 
-Update 1.2: I actually totally muffed the measurements because I wasn't using a consistent reference point <i>per joint</i>. So now I'll just redo the measurements and put'm in a table.
+I think I underestimated that measurement of how much clearance I needed because I didn't take into account the amount of material I'll use to simulate the actual finger so I might need 3mm. or more to get clearance. 
 
+### Update 1.2: 
+
+I actually totally muffed the measurements because I wasn't using a consistent reference point <i>per joint</i>. So now I'll just redo the measurements and put'm in a table.
 
 <table>
   <tr>
