@@ -20,7 +20,15 @@ So yesterday I did this for about an hour or so and took initial measurements of
     <th> Pinky Finger </th>
   </tr>
   <tr>
-    <td> Degrees of Freedome </td>
+    <td> Degrees of Freedom </td>
+    <td> 2 </td>
+    <td> 3 </td>
+    <td> 3 </td>
+    <td> 3 </td>
+    <td> 3 </td>    
+  </tr>
+  <tr>
+    <td> First Joint Height </td>
     <td> 2 </td>
     <td> 3 </td>
     <td> 3 </td>
