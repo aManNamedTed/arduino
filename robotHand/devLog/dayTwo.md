@@ -64,12 +64,27 @@ Because the second and third joints are connected to the first, the second and t
     <td> 90 </td>
   </tr>
   <tr>
-    <th> First Joint Flexion (mm) </th>
-    <td> </td>
-    <td> </td>
-    <td> </td>
-    <td> </td>
-    <td> </td>
-    <td> </td>
+    <th> First Joint Resting (degrees) </th>
+    <td> 135-145 </td>
+    <td> 73-75 </td>
+    <td> 73-75 </td>
+    <td> 73-75 </td>
+    <td> 73-75 </td>
+  </tr>
+  <tr>
+    <th> Second Joint Resting (degrees) </th>
+    <td> 120 </td>
+    <td> 120 </td>
+    <td> 120 </td>
+    <td> 120 </td>
+    <td> 120 </td>
+  </tr>
+  <tr>
+    <th> Third Joint Resting (degrees) </th>
+    <td> N/A </td>
+    <td> 100 </td>
+    <td> 100 </td>
+    <td> 100 </td>
+    <td> 100 </td>
   </tr>
 </table>
