@@ -20,6 +20,10 @@ Because I think it would be more interesting to have range of motion in both dir
 
 Because the second and third joints are connected to the first, the second and third joints will remain at their 90 degree baseline.
 
+### Update 1.2
+
+Okay I messed up. The second joint has more than a 90 degree range of motion, which means baseline for second joints will have to be a little less than 90 degrees. Currently second joint range of motion is measuring about 115 degrees for a flexed position. Well... I guess my hope for equal range of motion for flexed and extended hand movement is nixed this time. Maybe if I had 360 degree range of motion servos, I could do some funky-cool things but that'll have to be next time.
+
 ## Range of Motion of Finger Joints
 <table>
   <tr>
