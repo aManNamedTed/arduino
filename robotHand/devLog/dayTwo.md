@@ -65,7 +65,6 @@ Okay I messed up. The second joint has more than a 90 degree range of motion, wh
     <td> 90 </td>
     <td> 90 </td>
     <td> 90 </td>
-    <td> 90 </td>
   </tr>
   <tr>
     <th> First Joint Resting (degrees) </th>
@@ -92,3 +91,11 @@ Okay I messed up. The second joint has more than a 90 degree range of motion, wh
     <td> 100 </td>
   </tr>
 </table>
+
+### Update 1.3
+
+Okay now that I have those measurements, I'll go back to thinking about how far to scale out this hand. I think 2x would be good. I just need to make sure the spacing between the servos is sufficient to allow for flexing into a fist.
+
+I'm also a little conflicted because I feel like I should make a finger/a couple of fingers and make sure they play nice before I put them on a palm-like structure. I mean I'm certain that I can develop something that will play nice, I just wanna get into the fun part of this project which is seeing the desired result.
+
+BUT, I guess I'll stick to just doing the palm first and the fingers later. Off to cut some cardboard!
