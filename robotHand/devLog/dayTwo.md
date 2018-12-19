@@ -6,7 +6,7 @@ As was mentioned a few days ago, it makes sense that the 0th degree of the joint
 
 This means that the physical design of the hand will have to consider the range of motion rather than the servo itself (this just means that each servo will have to be rotated toward the back of the hand to account for the extended finger joint). 
 
-### Update 1.0
+### Update 2.0
 
 Upon further consideration, it doesn't make sense that I should let 0 degrees be the extended range of motion because what if in the future it needs to extend beyond that? Designing it into the hand is a <i>bad</i> idea. So what I should do instead is set resting hand degree measures to be > 30 or so.
 
@@ -16,11 +16,11 @@ Because I think it would be more interesting to have range of motion in both dir
 
 <b>Final Determination</b>: A high-five hand shape will be designated at 90 degrees.
 
-### Update 1.1
+### Update 2.1
 
 Because the second and third joints are connected to the first, the second and third joints will remain at their 90 degree baseline.
 
-### Update 1.2
+### Update 2.2
 
 Okay I messed up. The second joint has more than a 90 degree range of motion, which means baseline for second joints will have to be a little less than 90 degrees. Currently second joint range of motion is measuring about 115 degrees for a flexed position. Well... I guess my hope for equal range of motion for flexed and extended hand movement is nixed this time. Maybe if I had 360 degree range of motion servos, I could do some funky-cool things but that'll have to be next time.
 
@@ -92,7 +92,7 @@ Okay I messed up. The second joint has more than a 90 degree range of motion, wh
   </tr>
 </table>
 
-### Update 1.3
+### Update 2.3
 
 Okay now that I have those measurements, I'll go back to thinking about how far to scale out this hand. I think 2x would be good. I just need to make sure the spacing between the servos is sufficient to allow for flexing into a fist.
 
@@ -100,11 +100,11 @@ I'm also a little conflicted because I feel like I should make a finger/a couple
 
 BUT, I guess I'll stick to just doing the palm first and the fingers later. Off to cut some cardboard!
 
-### Update 1.4
+### Update 2.4
 
 Guess the distance between the first and second joint is about 45mm., which means if my actual distance between first and second joint is 20mm., I need to scale the entire thing by 2.5x to make it realistic (in terms of my hand, not an average measurement).
 
-### Update 1.5
+### Update 2.5
 
 This is going ok. It's just for a demo of what the hand could be, not a perfect product that I can sell tomorrow. This is hard.
 
