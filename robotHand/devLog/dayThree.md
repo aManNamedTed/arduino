@@ -53,8 +53,12 @@ This means I'll start each first joint pin with a red jumper cable, second joint
     <li> 14 - 25: Ring </li>
     <li> 26 - 31, 33 - 38: Middle </li>
     <li> 32: Spacer </li>
-    <li> 39 - 50: Middle </li>
-    <li> 51 - 62: Index </li>
+    <li> 39 - 50: Index </li>
+    <li> 51 - 62: Thumb </li>
     <li> 63: Spacer </li>
 </ol>
+
+## Update 3.1
+
+I'm gonna figure out how to attach the thumb later. I am still not sure whether I want to do two servos for the thumb or just one. For now I'm leaning towards one but we'll see.
 
