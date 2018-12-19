@@ -110,4 +110,4 @@ This is going ok. It's just for a demo of what the hand could be, not a perfect 
 
 I'm gonna work on assembling finger-like parts now.
 
-<img src="../cardboardHandPieces.jpg" />
+<img src="../img/cardboardHandPieces.jpg" />
