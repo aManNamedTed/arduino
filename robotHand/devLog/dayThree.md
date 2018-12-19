@@ -16,7 +16,7 @@ Also usually when I format a breadboard with projects I like to make the breadbo
 This means I'll start each first joint pin with a red jumper cable, second joint orange, and third joint yellow. This will make it easy to distinguish because each group of joints will be distinguished per placement on the Arduino, and the color of the cable will communicate the joint clearly and indistinguishably per finger.
 
 ### Next, how should I space out the pins on the breadboard to display a neatness?
->> Because I have a 63x10 pin breadboard, I'll have 14 or 15 pins to account for, which--for the sake of simplicity--we'll choose to account for 15, meaning I can have a spacer pin on both ends, and the middle, meaning I should have a perfect symmetry on the breadboard per pin group. (or 60 pins to map 15 groups) 
+>> Because I have a 63x10 pin breadboard, I'll have 14 or 15 pins to account for, which--for the sake of simplicity--we'll choose to account for 15, meaning I can have a spacer pin on both ends, and the middle, meaning I should have a perfect symmetry on the breadboard per pin group (or 60 pins to map 5 groups). This means I should divide 60 by 5, because there are five fingers, and each finger needs at most 3 pins for each servo, meaning 12 pins per group, which fits perfectly.
 
 ### What colors go with what finger?
 >> So each servo group will have their own color, providing insight into their grouping, and the previously defined coloring convention will provide insight into the specific joint number.
@@ -40,5 +40,21 @@ This means I'll start each first joint pin with a red jumper cable, second joint
     </tr>
 </table>
 
+<img src="../img/firstJointAttached.jpg" />
+
+<img src="../img/servoBraids.jpg" />
+
 ### What are the specific pins per group?
->> 
+>> Because we're using the first, middle, and last pin as spacers for symmetry, we will use the pins as followed:
+
+<ol>
+    <li> 1: Spacer </li>
+    <li> 2 - 13: Pinky </li>
+    <li> 14 - 25: Ring </li>
+    <li> 26 - 31, 33 - 38: Middle </li>
+    <li> 32: Spacer </li>
+    <li> 39 - 50: Middle </li>
+    <li> 51 - 62: Index </li>
+    <li> 63: Spacer </li>
+</ol>
+
