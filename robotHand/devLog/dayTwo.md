@@ -99,3 +99,15 @@ Okay now that I have those measurements, I'll go back to thinking about how far 
 I'm also a little conflicted because I feel like I should make a finger/a couple of fingers and make sure they play nice before I put them on a palm-like structure. I mean I'm certain that I can develop something that will play nice, I just wanna get into the fun part of this project which is seeing the desired result.
 
 BUT, I guess I'll stick to just doing the palm first and the fingers later. Off to cut some cardboard!
+
+### Update 1.4
+
+Guess the distance between the first and second joint is about 45mm., which means if my actual distance between first and second joint is 20mm., I need to scale the entire thing by 2.5x to make it realistic (in terms of my hand, not an average measurement).
+
+### Update 1.5
+
+This is going ok. It's just for a demo of what the hand could be, not a perfect product that I can sell tomorrow. This is hard.
+
+I'm gonna work on assembling finger-like parts now.
+
+<img src="../cardboardHandPieces.jpg" />
