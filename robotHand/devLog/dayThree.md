@@ -62,3 +62,12 @@ This means I'll start each first joint pin with a red jumper cable, second joint
 
 I'm gonna figure out how to attach the thumb later. I am still not sure whether I want to do two servos for the thumb or just one. For now I'm leaning towards one but we'll see.
 
+## Update 3.2
+
+I figured out a way to lengthen the servo arm without too much interference with range of motion!! And it's working! It's working! I mean besides the intermittent stopping of function, it's working and this is looking even more feasible now!
+
+## Update 3.3
+
+I scrapped the entire project. Something is happening with a servo where it has intermittent usage... which is extremely frustrating.
+
+
