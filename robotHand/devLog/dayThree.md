@@ -69,5 +69,4 @@ I figured out a way to lengthen the servo arm without too much interference with
 ## Update 3.3
 
 I scrapped the entire project. Something is happening with a servo where it has intermittent usage... which is extremely frustrating.
-
-
+<img src="../img/scrappingForNow.jpg" />
