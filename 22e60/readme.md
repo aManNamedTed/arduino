@@ -23,14 +23,13 @@ Angular Rotation Sensor: 32
 Light Sensor: 491
 Moisture Sensor: 885
 
-Your Password: 9sp2;]}[\2|54?.,Aw1#wT32W
+Your Password: 9sp2;]}w\2|54?.,Aw1#wT32W-_=qW2\
 
 ## Statistics
 
 Total unique passwords possible:
 P(n,r)=P(93,32)
-
-### = 93! / (93−32)!
-### = 2.278994482E+60
+= 93! / (93−32)!
+= 2.278994482E+60
 ### = 2,278,994,482,951,704,616,554,139,354,736,922,451,928,637,507,549,265,920,000,000
-### 2.2 octodecillion passwords possible
+### = 2.2 octodecillion passwords possible
