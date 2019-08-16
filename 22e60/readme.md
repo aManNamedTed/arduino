@@ -33,3 +33,4 @@ P(n,r)=P(93,32)
 = 2.278994482E+60
 ### = 2,278,994,482,951,704,616,554,139,354,736,922,451,928,637,507,549,265,920,000,000
 ### = 2.2 octodecillion passwords possible
+https://www.youtube.com/watch?v=Mr9FQKcrGpAk
