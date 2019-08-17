@@ -42,7 +42,7 @@ P(n,r)=P(93,32)
 = 93! / (93−32)!
 = 2.278994482E+60
 ### = 2,278,994,482,951,704,616,554,139,354,736,922,451,928,637,507,549,265,920,000,000
-### = 2.2 octodecillion passwords possible
+Otherwise known as: two novemdecillion two hundred seventy-eight octodecillion nine hundred ninety-four septendecillion four hundred eighty-two sexdecillion nine hundred fifty-one quindecillion seven hundred four quattuordecillion six hundred sixteen tredecillion five hundred fifty-four duodecillion one hundred thirty-nine undecillion three hundred fifty-four decillion seven hundred thirty-six nonillion nine hundred twenty-two octillion four hundred fifty-one septillion nine hundred twenty-eight sextillion six hundred thirty-seven quintillion five hundred seven quadrillion five hundred forty-nine trillion two hundred sixty-five billion and nine hundred twenty million
 
 ## Resources
 How to set up a Liquid Crystal Display on the Arduino (LCD)
