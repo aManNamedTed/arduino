@@ -1,5 +1,5 @@
 ## Why a Password Generator -- 22e60?
-<img src="pwGenBright.jpg"/>
+<img src="pwGenDark.jpg"/>
 <img src="whiteboard.jpg"/>
 
 
