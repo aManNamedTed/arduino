@@ -47,6 +47,9 @@ Otherwise known as: two novemdecillion two hundred seventy-eight octodecillion n
 
 # Credit
 [How to set up an LCD](https://www.youtube.com/watch?v=Mr9FQKcrGpA)
+
 [How to set up a button](https://www.youtube.com/watch?v=VPGRqML_v0w)
+
 [How to set up an Ultrasonic Sensor](https://www.youtube.com/watch?v=ZejQOX69K5M)
+
 [How to set up a DHT11 Humidity Sensor](https://www.youtube.com/watch?v=OogldLc9uYc)
