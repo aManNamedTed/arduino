@@ -28,6 +28,11 @@ Your Password: 9sp2;]}w\2|54?.,Aw1#wT32W-_=qW2]
   <li>
     I need to find out a way to create information from these inputs in the form of 4 digit groups.
   </li>
+  <li>
+    Alphabet:" 1!2@3#4$5%6^7&8*9(0)-_=+]}\|[{pPoOiIuUyYtTrReEwWqQaAsSdDfFgGhHjJkKlL;:'"/?.>,<mMnNbBvVcCxXzZ"
+    >
+    >> 93 Choose 32, 93 possible characters, or an alphabet of base 93, that chooses 32 characters to generate a password.
+  </li>
 </ol>
 
 ## Statistics
