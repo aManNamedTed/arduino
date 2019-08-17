@@ -1,28 +1,33 @@
 #include <LiquidCrystal.h>
 
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
-int buttonPin = 46;
-int ledPin = 13;
-
-int buttonState = 0;
+int leds[] = {10, 9, 8, 7};
+int buttons[] = {A2, A3, A4, A5};
+int buttonStates[] = {0, 0, 0, 0};
+int n = (sizeof(buttonStates) / sizeof(buttonStates[0]));
 void setup() {
   // put your setup code here, to run once:
-  lcd.begin(16, 2);
-  pinMode(ledPin, OUTPUT);
-  pinMode(buttonPin, INPUT);
+  //lcd.begin(16, 2);
+  for(int i = 0; i < n; i++) {
+    pinMode(leds[i], OUTPUT);
+    pinMode(buttons[i], INPUT);
+  }
 }
 
 void loop() {
-  buttonState = digitalRead(buttonPin);
+  for(int i = 0; i < n; i++) {
+    buttonStates[i] = digitalRead(buttons[i]);
 
-  if(buttonState == HIGH) {
-    digitalWrite(ledPin, HIGH);
-  } else {
-    digitalWrite(ledPin, LOW);
-    
+    if(buttonStates[i] == HIGH or buttonStates[i]) {
+      digitalWrite(leds[i], HIGH);
+      buttonStates[i] = 1;
+    } else {
+      digitalWrite(leds[i], LOW);
+      buttonStates[i] = 0;
+    }
   }
   
-  lcd.print("");
+  //lcd.print("");
   /*
   delay(500);
   lcd.clear();
