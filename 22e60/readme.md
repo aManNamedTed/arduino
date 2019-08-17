@@ -46,5 +46,7 @@ P(n,r)=P(93,32)
 Otherwise known as: two novemdecillion two hundred seventy-eight octodecillion nine hundred ninety-four septendecillion four hundred eighty-two sexdecillion nine hundred fifty-one quindecillion seven hundred four quattuordecillion six hundred sixteen tredecillion five hundred fifty-four duodecillion one hundred thirty-nine undecillion three hundred fifty-four decillion seven hundred thirty-six nonillion nine hundred twenty-two octillion four hundred fifty-one septillion nine hundred twenty-eight sextillion six hundred thirty-seven quintillion five hundred seven quadrillion five hundred forty-nine trillion two hundred sixty-five billion and nine hundred twenty million
 
 # Credit
-How to set up a Liquid Crystal Display on the Arduino (LCD)
-https://www.youtube.com/watch?v=Mr9FQKcrGpA
+[How to set up an LCD](https://www.youtube.com/watch?v=Mr9FQKcrGpA)
+[How to set up a button](https://www.youtube.com/watch?v=VPGRqML_v0w)
+[How to set up an Ultrasonic Sensor](https://www.youtube.com/watch?v=ZejQOX69K5M)
+[How to set up a DHT11 Humidity Sensor](https://www.youtube.com/watch?v=OogldLc9uYc)
