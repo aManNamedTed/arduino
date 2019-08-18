@@ -44,10 +44,6 @@ We ingest stimuli from our immediate environment, and create a unique 32 charact
 
 Password: "fm,5d|Vu8-F.bXfc(@qV?8{^+<MJ n8>"
 
-# Thoughts:
-
-> I could totally make custom glyphs for the liquid crystal display to obfuscate information more. But to what end? haha.
-
 # Statistics
 
 ### Total possible permutations: P(n,r) = P(93,32) = 93! / (93−32)!
@@ -57,6 +53,14 @@ Password: "fm,5d|Vu8-F.bXfc(@qV?8{^+<MJ n8>"
 ### = 2,278,994,482,951,704,616,554,139,354,736,922,451,928,637,507,549,265,920,000,000
 
 Otherwise known as: two novemdecillion two hundred seventy-eight octodecillion nine hundred ninety-four septendecillion four hundred eighty-two sexdecillion nine hundred fifty-one quindecillion seven hundred four quattuordecillion six hundred sixteen tredecillion five hundred fifty-four duodecillion one hundred thirty-nine undecillion three hundred fifty-four decillion seven hundred thirty-six nonillion nine hundred twenty-two octillion four hundred fifty-one septillion nine hundred twenty-eight sextillion six hundred thirty-seven quintillion five hundred seven quadrillion five hundred forty-nine trillion two hundred sixty-five billion and nine hundred twenty million
+
+# Concluding Thoughts:
+
+> I could totally make custom glyphs for the liquid crystal display to obfuscate information more. But to what end? haha.
+
+Thanks for checking out this sketch! I'm thinking I could hook this up to a Raspberry Pi and just beam up a single token every so often in case I need to reset a password here or there. I mean obviously the solution would be to just use single sign-on or one-time security tokens, etc.
+
+Anyway, yeah. Thanks for checking this out! Hope you glean some ideas from it.
 
 # Credit
 [How to set up an LCD](https://www.youtube.com/watch?v=Mr9FQKcrGpA)
