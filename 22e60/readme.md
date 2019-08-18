@@ -1,7 +1,9 @@
 ## Why a Password Generator -- 22e60?
-<img src="pwGenDark.jpg"/>
+<img src="22e60.gif"/>
+<img src="pwGenBright.jpg"/>
+<img src="pwgen1.jpg"/>
+<img src="pwgen2.jpg"/>
 <img src="whiteboard.jpg"/>
-
 
 Because obfuscating password generation with a custom-base alphabet is something that struck me on Thursday night in August 2019. Go figure.
 
