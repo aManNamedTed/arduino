@@ -7,6 +7,7 @@ something that struck me on a Thursday night in August. Go figure.
 <img src="22e60.gif"/>
 <img src="pwGenBright.jpg"/>
 <img src="pwgen2.jpg"/>
+<img src="22e60regen.gif"/>
 
 # How?
 
