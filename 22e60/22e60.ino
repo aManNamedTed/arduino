@@ -29,9 +29,9 @@ int buttonStates[] = {0, 0, 0, 0};
 int leds[] = {10, 9, 8, 7};
 int ledStates[] = {0, 0, 0, 0};
 int n = (sizeof(buttonStates) / sizeof(buttonStates[0]));
-const int TETRAD = 9999;
+const int TETRAD = 9999; // max value for a group of for digits
 
-// guarantees a number between 1000 and 9999
+// guarantees a number between 1000 and 9999 (4 digits)
 int expandSeedElement(int element, int i) {
   while(element <= TETRAD) {
     element += 1;
@@ -44,6 +44,7 @@ int expandSeedElement(int element, int i) {
   return element;
 }
 
+// convert the expanded seed element (1000 - 9999) into a base-93 tetrad
 String getTetradFromSeedElement(int element) {
   int currNum = 0;
   int currRandCharIndex = 0;
@@ -60,6 +61,7 @@ String getTetradFromSeedElement(int element) {
   return tetrad;
 }
 
+// given input from multiple source(s), create a 32 character string from a base-93 alphabet
 String generatePW(int dist, int temp, int humi, int r, int g, int b, int y, int checkSum) {
   int seed[] = {dist, temp, humi, r, g, b, y, checkSum};
   String pw = "";
@@ -84,6 +86,7 @@ void setup() {
 }
 
 void loop() {
+  // ultrasonic setup
   digitalWrite(trigPin, LOW);
   delay(2);
   digitalWrite(trigPin, HIGH); 
@@ -115,17 +118,23 @@ void loop() {
 
   pwGenPinState = digitalRead(pwGenPin);
   if(pwGenPinState == HIGH) {
+    // checkSum is sum of all raw input values
     checkSum = dist + temp + humi + ledStates[3] + ledStates[2] + ledStates[1] + ledStates[0];
     pw = generatePW(dist, temp, humi, ledStates[3], ledStates[2], ledStates[1], ledStates[0], checkSum);
-    Serial.println(pw);
+
     for(int i = 0; i < pw.length(); i++) {
       lcd.print(pw[i]);
       if(i == 15) {
-        lcd.setCursor(0, 1);
+        // set cursor to next 16char line of lcd for full pw display
+        lcd.setCursor(0, 1); 
       }
-      delay(10);
+      // delay between char lcd prints to have a cascading visual
+      delay(10); 
     }
+    // reset cursor to (0,0) on LCD for next password generation
     lcd.setCursor(0,0);
+
+    // set delay between button presses so there is only 1 pw generated per press
     delay(111);
   }
 }
