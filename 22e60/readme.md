@@ -10,7 +10,7 @@ something that struck me on a Thursday night in August. Go figure.
 
 # How?
 
-We ingest stimuli from our immediate environment, and create a unique 32 character string.
+We ingest stimuli from our immediate environment, and create a unique 32 character 200-bit string.
 
 <img src="whiteboard.jpg"/>
 
