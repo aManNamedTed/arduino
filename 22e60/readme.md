@@ -10,9 +10,9 @@ something that struck me on a Thursday night in August. Go figure.
 
 # How?
 
-<img src="whiteboard.jpg"/>
-
 We ingest stimuli from our immediate environment, and create a unique 32 character string.
+
+<img src="whiteboard.jpg"/>
 
 ## Example
 <ul>
