@@ -1,6 +1,6 @@
 # Why a Password Generator -- 22e60?
 
-Because obfuscating password generation with a custom-base alphabet is something that struck me on a Thursday night in August. Go figure.
+> Because obfuscating password generation with a custom-base alphabet is something that struck me on a Thursday night in August. Go figure.
 
 <img src="22e60.gif"/>
 <img src="pwGenBright.jpg"/>
@@ -15,7 +15,7 @@ We ingest stimuli from our immediate environment, and create a unique 32 charact
 ## Example
 <ul>
   <li>
-    Ultrasonic Sensor 1: 33cm
+    Ultrasonic Sensor: 33cm
   </li>
   <li>
     Temperature: 23C
