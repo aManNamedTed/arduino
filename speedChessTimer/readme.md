@@ -1,4 +1,4 @@
-## Why a Chess Timer?
+## Why a Speed Chess Timer?
 
 <img src="welcomeScreen.gif"/>
 <img src="timerRunning.gif"/>
